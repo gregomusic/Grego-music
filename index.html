@@ -6,178 +6,805 @@
 
 <meta name="google-site-verification" content="KBglfLasf-b1WivOBV4LVPZbQyVHCN9qqsDbuU83zyI" />
 
-<meta name="description" content="Grego Music — Site Oficial. Ouça músicas do Grego Music online.">
-<meta name="keywords" content="Grego Music, música Grego Music, site oficial Grego Music, ouvir música online">
+<meta name="description" content="Grego Music — Site Oficial. Ouça músicas, descubra novidades e acompanhe o Grego Music online.">
+<meta name="keywords" content="Grego Music, música Grego Music, ouvir música online, músicas angolanas, site oficial Grego Music">
+<meta name="author" content="Grego Music">
+
+<meta property="og:title" content="Grego Music — Site Oficial">
+<meta property="og:description" content="Ouça músicas do Grego Music online.">
+<meta property="og:type" content="website">
 
 <title>Grego Music — Site Oficial</title>
 
 <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background: #0b0b0f;
-  color: white;
+html{
+  scroll-behavior:smooth;
 }
 
-header {
-  background: linear-gradient(135deg, #111, #1b1b22);
-  padding: 25px 15px;
-  text-align: center;
-  border-bottom: 2px solid #25d366;
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#08090d;
+  color:#fff;
+  line-height:1.5;
+  padding-bottom:75px;
 }
 
-header h1 {
-  font-size: 32px;
-  margin-bottom: 8px;
+button,
+input{
+  font:inherit;
 }
 
-header p {
-  color: #aaa;
-  margin-bottom: 8px;
+/* CABEÇALHO */
+header{
+  position:relative;
+  overflow:hidden;
+  padding:45px 18px 35px;
+  text-align:center;
+  background:
+    radial-gradient(circle at top,#252532 0,#11121a 45%,#08090d 100%);
+  border-bottom:2px solid #25d366;
 }
 
-.about {
-  color: #ccc;
-  font-size: 15px;
-  line-height: 1.5;
-  max-width: 600px;
-  margin: auto;
+.logo{
+  width:105px;
+  height:105px;
+  margin:0 auto 15px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(135deg,#25d366,#128c7e);
+  box-shadow:0 0 35px rgba(37,211,102,.35);
+  font-size:48px;
 }
 
-.search {
-  padding: 20px 15px;
+header h1{
+  font-size:34px;
+  letter-spacing:1px;
+  margin-bottom:6px;
 }
 
-.search input {
-  width: 100%;
-  padding: 14px;
-  border-radius: 25px;
-  border: none;
-  outline: none;
-  font-size: 16px;
+header .subtitle{
+  color:#25d366;
+  font-weight:bold;
+  margin-bottom:14px;
 }
 
-.container {
-  padding: 10px 15px 100px;
+.about{
+  max-width:650px;
+  margin:auto;
+  color:#bcbcc4;
+  font-size:15px;
 }
 
-.music-card {
-  background: #17171d;
-  border-radius: 15px;
-  padding: 18px;
-  margin-bottom: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,.4);
+/* MENU */
+nav{
+  position:sticky;
+  top:0;
+  z-index:50;
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  padding:10px;
+  background:rgba(12,12,17,.96);
+  border-bottom:1px solid #292933;
+  backdrop-filter:blur(10px);
 }
 
-.music-card h2 {
-  font-size: 20px;
-  margin-bottom: 8px;
+nav a{
+  color:#ddd;
+  text-decoration:none;
+  padding:8px 11px;
+  border-radius:20px;
+  font-size:13px;
 }
 
-.music-card p {
-  color: #999;
-  margin-bottom: 12px;
+nav a:hover{
+  background:#25d366;
+  color:#000;
 }
 
-audio {
-  width: 100%;
+/* PESQUISA */
+.search-area{
+  max-width:850px;
+  margin:25px auto 10px;
+  padding:0 15px;
 }
 
-.no-result {
-  text-align: center;
-  color: #aaa;
-  padding: 30px;
-  display: none;
+.search-box{
+  position:relative;
 }
 
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: #111116;
-  padding: 14px;
-  text-align: center;
-  border-top: 1px solid #333;
-  color: #aaa;
-  font-size: 14px;
+.search-box input{
+  width:100%;
+  padding:16px 48px 16px 18px;
+  border:none;
+  outline:none;
+  border-radius:30px;
+  background:#171820;
+  color:white;
+  border:1px solid #30313b;
+  font-size:16px;
+}
+
+.search-box input:focus{
+  border-color:#25d366;
+  box-shadow:0 0 0 3px rgba(37,211,102,.12);
+}
+
+.search-icon{
+  position:absolute;
+  right:18px;
+  top:50%;
+  transform:translateY(-50%);
+}
+
+/* FILTROS */
+.filters{
+  max-width:850px;
+  margin:12px auto;
+  padding:0 15px;
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+
+.filter-btn{
+  border:1px solid #30313b;
+  background:#15161d;
+  color:#ccc;
+  border-radius:20px;
+  padding:8px 13px;
+  cursor:pointer;
+}
+
+.filter-btn.active,
+.filter-btn:hover{
+  background:#25d366;
+  color:#000;
+  border-color:#25d366;
+}
+
+/* CONTEÚDO */
+.container{
+  max-width:850px;
+  margin:auto;
+  padding:10px 15px 120px;
+}
+
+.section-title{
+  margin:25px 0 15px;
+  font-size:23px;
+}
+
+.section-title span{
+  color:#25d366;
+}
+
+/* ESPAÇO DE ANÚNCIO */
+.ad-box{
+  min-height:90px;
+  margin:20px 0;
+  border:1px dashed #333640;
+  border-radius:14px;
+  background:#0e0f14;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#62636c;
+  font-size:12px;
+  text-align:center;
+}
+
+/*
+  FUTURO ADSENSE:
+  Quando o Google AdSense fornecer o teu código,
+  ele poderá ser colocado dentro dos .ad-box.
+*/
+
+/* CARTÃO DE MÚSICA */
+.music-card{
+  position:relative;
+  background:linear-gradient(145deg,#191a22,#101117);
+  border:1px solid #292b35;
+  border-radius:18px;
+  padding:20px;
+  margin-bottom:18px;
+  box-shadow:0 8px 25px rgba(0,0,0,.25);
+  transition:.25s;
+}
+
+.music-card:hover{
+  transform:translateY(-2px);
+  border-color:#25d366;
+}
+
+.music-top{
+  display:flex;
+  gap:15px;
+  align-items:center;
+  margin-bottom:16px;
+}
+
+.cover{
+  width:72px;
+  height:72px;
+  flex-shrink:0;
+  border-radius:14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(135deg,#25d366,#075e54);
+  font-size:30px;
+}
+
+.music-info{
+  flex:1;
+}
+
+.music-card h2{
+  font-size:19px;
+  margin-bottom:4px;
+}
+
+.music-card p{
+  color:#999ba5;
+  font-size:14px;
+}
+
+audio{
+  width:100%;
+  margin-top:4px;
+}
+
+.music-actions{
+  display:flex;
+  gap:8px;
+  margin-top:12px;
+}
+
+.action-btn{
+  border:1px solid #30323d;
+  background:#14151c;
+  color:#ddd;
+  border-radius:10px;
+  padding:8px 12px;
+  cursor:pointer;
+}
+
+.action-btn:hover{
+  background:#25d366;
+  color:#000;
+}
+
+.favorite.active{
+  color:#25d366;
+  border-color:#25d366;
+}
+
+/* SEM RESULTADOS */
+.no-result{
+  display:none;
+  text-align:center;
+  padding:45px 15px;
+  color:#999;
+}
+
+.no-result strong{
+  display:block;
+  color:#fff;
+  margin-bottom:5px;
+}
+
+/* SOBRE */
+.info-section{
+  margin-top:35px;
+  background:#111219;
+  border:1px solid #292b35;
+  border-radius:18px;
+  padding:22px;
+}
+
+.info-section h2{
+  margin-bottom:10px;
+  color:#25d366;
+}
+
+.info-section p{
+  color:#aaa;
+  font-size:14px;
+  margin-bottom:12px;
+}
+
+/* BOTÃO VOLTAR AO TOPO */
+.top-btn{
+  position:fixed;
+  right:18px;
+  bottom:88px;
+  width:44px;
+  height:44px;
+  border:none;
+  border-radius:50%;
+  background:#25d366;
+  color:#000;
+  font-size:20px;
+  cursor:pointer;
+  z-index:40;
+  box-shadow:0 5px 20px rgba(0,0,0,.4);
+}
+
+/* RODAPÉ */
+footer{
+  background:#101116;
+  border-top:1px solid #292b35;
+  text-align:center;
+  padding:20px 15px;
+  color:#777;
+  font-size:13px;
+}
+
+.footer-links{
+  margin-bottom:8px;
+}
+
+.footer-links a{
+  color:#aaa;
+  text-decoration:none;
+  margin:0 6px;
+}
+
+.footer-links a:hover{
+  color:#25d366;
+}
+
+/* RESPONSIVO */
+@media(max-width:600px){
+
+  header{
+    padding:35px 15px 30px;
+  }
+
+  header h1{
+    font-size:29px;
+  }
+
+  .logo{
+    width:90px;
+    height:90px;
+    font-size:40px;
+  }
+
+  nav{
+    overflow-x:auto;
+    justify-content:flex-start;
+    white-space:nowrap;
+  }
+
+  nav a{
+    flex-shrink:0;
+  }
+
+  .music-card{
+    padding:16px;
+  }
+
+  .cover{
+    width:62px;
+    height:62px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>🎵 GREGO MUSIC</h1>
-  <p>Site Oficial do Grego Music</p>
+<header id="inicio">
+
+  <div class="logo">🎵</div>
+
+  <h1>GREGO MUSIC</h1>
+
+  <div class="subtitle">
+    Site Oficial
+  </div>
 
   <div class="about">
-    Grego Music é o site oficial para ouvir músicas do Grego Music online.
-    Descubra e ouça as músicas disponíveis diretamente no site.
+    Bem-vindo ao Grego Music. Aqui podes ouvir músicas,
+    descobrir novidades e acompanhar o trabalho do Grego Music
+    diretamente online.
   </div>
+
 </header>
 
-<div class="search">
-  <input
-    type="text"
-    id="searchInput"
-    placeholder="🔎 Pesquisar música..."
-  >
+<nav>
+  <a href="#inicio">Início</a>
+  <a href="#musicas">🎵 Músicas</a>
+  <a href="#sobre">ℹ️ Sobre</a>
+  <a href="#contacto">📩 Contacto</a>
+</nav>
+
+<section class="search-area">
+
+  <div class="search-box">
+
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="🔎 Pesquisar música..."
+      autocomplete="off"
+    >
+
+    <span class="search-icon">🔍</span>
+
+  </div>
+
+</section>
+
+<div class="filters">
+
+  <button class="filter-btn active" onclick="mostrarTodas(this)">
+    Todas
+  </button>
+
+  <button class="filter-btn" onclick="mostrarFavoritas(this)">
+    ❤️ Favoritas
+  </button>
+
 </div>
 
-<main class="container" id="musicList">
+<main class="container">
 
-  <div class="music-card" data-name="Grego Music">
-    <h2>🎵 Grego Music</h2>
-    <p>Ouça a música</p>
+  <div class="ad-box">
+    Espaço reservado para publicidade
+  </div>
 
-    <audio controls>
+  <h2 class="section-title" id="musicas">
+    🎵 <span>Músicas</span>
+  </h2>
+
+  <!-- MÚSICA 1 -->
+  <div class="music-card"
+       data-name="Grego Music"
+       data-id="musica1">
+
+    <div class="music-top">
+
+      <div class="cover">
+        🎵
+      </div>
+
+      <div class="music-info">
+
+        <h2>Grego Music</h2>
+
+        <p>
+          Música oficial • Grego Music
+        </p>
+
+      </div>
+
+    </div>
+
+    <audio controls preload="metadata">
       <source src="Grego_M_.mp3" type="audio/mpeg">
       O teu navegador não suporta áudio.
     </audio>
+
+    <div class="music-actions">
+
+      <button
+        class="action-btn favorite"
+        onclick="favoritar('musica1', this)">
+        ❤️ Favoritar
+      </button>
+
+      <button
+        class="action-btn"
+        onclick="partilhar('Grego Music')">
+        📤 Partilhar
+      </button>
+
+    </div>
+
   </div>
+
+  <div class="no-result" id="noResult">
+
+    <strong>😕 Nenhuma música encontrada</strong>
+
+    Tenta pesquisar por outro nome.
+
+  </div>
+
+  <div class="ad-box">
+    Espaço reservado para publicidade
+  </div>
+
+  <!-- SOBRE -->
+  <section class="info-section" id="sobre">
+
+    <h2>ℹ️ Sobre o Grego Music</h2>
+
+    <p>
+      O Grego Music é uma plataforma dedicada à música e
+      ao conteúdo artístico do Grego Music.
+    </p>
+
+    <p>
+      O objetivo é oferecer uma experiência simples,
+      rápida e agradável para ouvir músicas online.
+    </p>
+
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="info-section" id="contacto">
+
+    <h2>📩 Contacto</h2>
+
+    <p>
+      Para assuntos profissionais, divulgação,
+      publicidade ou parcerias, entre em contacto
+      com a equipa do Grego Music.
+    </p>
+
+    <p>
+      Em breve serão adicionados os canais oficiais
+      de contacto e redes sociais.
+    </p>
+
+  </section>
+
+  <!-- PRIVACIDADE -->
+  <section class="info-section" id="privacidade">
+
+    <h2>🔐 Política de Privacidade</h2>
+
+    <p>
+      O Grego Music respeita a privacidade dos visitantes.
+      Informações pessoais não são solicitadas sem necessidade.
+    </p>
+
+    <p>
+      Serviços de publicidade e análise poderão utilizar
+      tecnologias como cookies de acordo com as suas próprias
+      políticas e com as opções disponíveis para o visitante.
+    </p>
+
+  </section>
+
+  <!-- TERMOS -->
+  <section class="info-section" id="termos">
+
+    <h2>📄 Termos de Uso</h2>
+
+    <p>
+      O conteúdo deste site destina-se a utilização legítima
+      e respeitosa. Não é permitido utilizar o site para
+      atividades ilegais ou para violar direitos de terceiros.
+    </p>
+
+  </section>
 
 </main>
 
-<div class="no-result" id="noResult">
-  Nenhuma música encontrada.
-</div>
+<button class="top-btn" onclick="voltarTopo()" title="Voltar ao topo">
+  ↑
+</button>
 
 <footer>
+
+  <div class="footer-links">
+
+    <a href="#sobre">Sobre</a>
+
+    <a href="#contacto">Contacto</a>
+
+    <a href="#privacidade">Privacidade</a>
+
+    <a href="#termos">Termos</a>
+
+  </div>
+
   © 2026 Grego Music — Site Oficial
+
 </footer>
 
 <script>
+
+/* PESQUISA */
 const searchInput = document.getElementById("searchInput");
 const musicCards = document.querySelectorAll(".music-card");
 const noResult = document.getElementById("noResult");
 
-searchInput.addEventListener("input", function () {
+searchInput.addEventListener("input", pesquisar);
 
-  const text = this.value.toLowerCase();
-  let found = false;
+function pesquisar(){
 
-  musicCards.forEach(function(card) {
+  const texto = searchInput.value
+    .toLowerCase()
+    .trim();
 
-    const name = card.dataset.name.toLowerCase();
+  let encontrou = false;
 
-    if (name.includes(text)) {
+  musicCards.forEach(function(card){
+
+    const nome = card.dataset.name.toLowerCase();
+
+    if(nome.includes(texto)){
+
       card.style.display = "block";
-      found = true;
-    } else {
+      encontrou = true;
+
+    }else{
+
       card.style.display = "none";
+
     }
 
   });
 
-  noResult.style.display = found ? "none" : "block";
-});
+  noResult.style.display =
+    encontrou ? "none" : "block";
+}
+
+
+/* FAVORITOS */
+function favoritar(id, botao){
+
+  let favoritos =
+    JSON.parse(localStorage.getItem("gregoFavoritos")) || [];
+
+  if(favoritos.includes(id)){
+
+    favoritos =
+      favoritos.filter(item => item !== id);
+
+    botao.classList.remove("active");
+    botao.innerHTML = "❤️ Favoritar";
+
+  }else{
+
+    favoritos.push(id);
+
+    botao.classList.add("active");
+    botao.innerHTML = "💚 Favoritada";
+
+  }
+
+  localStorage.setItem(
+    "gregoFavoritos",
+    JSON.stringify(favoritos)
+  );
+
+}
+
+
+/* CARREGAR FAVORITOS */
+function carregarFavoritos(){
+
+  const favoritos =
+    JSON.parse(localStorage.getItem("gregoFavoritos")) || [];
+
+  document.querySelectorAll(".favorite").forEach(function(botao){
+
+    const card =
+      botao.closest(".music-card");
+
+    const id =
+      card.dataset.id;
+
+    if(favoritos.includes(id)){
+
+      botao.classList.add("active");
+      botao.innerHTML = "💚 Favoritada";
+
+    }
+
+  });
+
+}
+
+
+/* MOSTRAR TODAS */
+function mostrarTodas(botao){
+
+  document.querySelectorAll(".filter-btn")
+    .forEach(btn => btn.classList.remove("active"));
+
+  botao.classList.add("active");
+
+  musicCards.forEach(card => {
+    card.style.display = "block";
+  });
+
+  noResult.style.display = "none";
+
+}
+
+
+/* MOSTRAR FAVORITAS */
+function mostrarFavoritas(botao){
+
+  document.querySelectorAll(".filter-btn")
+    .forEach(btn => btn.classList.remove("active"));
+
+  botao.classList.add("active");
+
+  const favoritos =
+    JSON.parse(localStorage.getItem("gregoFavoritos")) || [];
+
+  let encontrou = false;
+
+  musicCards.forEach(function(card){
+
+    if(favoritos.includes(card.dataset.id)){
+
+      card.style.display = "block";
+      encontrou = true;
+
+    }else{
+
+      card.style.display = "none";
+
+    }
+
+  });
+
+  noResult.style.display =
+    encontrou ? "none" : "block";
+
+}
+
+
+/* PARTILHAR */
+function partilhar(nome){
+
+  const texto =
+    "Estou a ouvir " + nome + " no Grego Music!";
+
+  if(navigator.share){
+
+    navigator.share({
+      title:"Grego Music",
+      text:texto,
+      url:window.location.href
+    });
+
+  }else{
+
+    navigator.clipboard.writeText(
+      window.location.href
+    );
+
+    alert("Link do Grego Music copiado!");
+
+  }
+
+}
+
+
+/* VOLTAR AO TOPO */
+function voltarTopo(){
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
+}
+
+
+/* INICIAR */
+carregarFavoritos();
+
 </script>
 
 </body>
-</html>
+  </html>
