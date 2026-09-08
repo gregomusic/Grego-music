@@ -1,1 +1,165 @@
 
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Grego Music</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0b0b0f;
+  color: white;
+}
+
+header {
+  background: linear-gradient(135deg, #111, #1b1b22);
+  padding: 25px 15px;
+  text-align: center;
+  border-bottom: 2px solid #25d366;
+}
+
+header h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+header p {
+  color: #aaa;
+}
+
+.search {
+  padding: 20px 15px;
+}
+
+.search input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.container {
+  padding: 10px 15px 100px;
+}
+
+.music-card {
+  background: #17171d;
+  border-radius: 15px;
+  padding: 18px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,.4);
+}
+
+.music-card h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.music-card p {
+  color: #999;
+  margin-bottom: 12px;
+}
+
+audio {
+  width: 100%;
+}
+
+.no-result {
+  text-align: center;
+  color: #aaa;
+  padding: 30px;
+  display: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #111116;
+  padding: 14px;
+  text-align: center;
+  border-top: 1px solid #333;
+  color: #aaa;
+  font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🎵 GREGO MUSIC</h1>
+  <p>Site Oficial do Grego Music</p>
+</header>
+
+<div class="search">
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="🔎 Pesquisar música..."
+  >
+</div>
+
+<main class="container" id="musicList">
+
+  <div class="music-card" data-name="Grego Music">
+    <h2>🎵 Grego Music</h2>
+    <p>Ouça a música</p>
+
+    <audio controls>
+      <source src="Grego_M_.mp3" type="audio/mpeg">
+      O teu navegador não suporta áudio.
+    </audio>
+  </div>
+
+</main>
+
+<div class="no-result" id="noResult">
+  Nenhuma música encontrada.
+</div>
+
+<footer>
+  © 2026 Grego Music
+</footer>
+
+<script>
+const searchInput = document.getElementById("searchInput");
+const musicCards = document.querySelectorAll(".music-card");
+const noResult = document.getElementById("noResult");
+
+searchInput.addEventListener("input", function () {
+
+  const text = this.value.toLowerCase();
+  let found = false;
+
+  musicCards.forEach(function(card) {
+
+    const name = card.dataset.name.toLowerCase();
+
+    if (name.includes(text)) {
+      card.style.display = "block";
+      found = true;
+    } else {
+      card.style.display = "none";
+    }
+
+  });
+
+  noResult.style.display = found ? "none" : "block";
+});
+</script>
+
+</body>
+</html>
