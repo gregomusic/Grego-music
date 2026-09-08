@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gregomusic.github.io/Grego-music/sitemap.xml
