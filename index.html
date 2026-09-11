@@ -1,68 +1,164 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-<meta name="google-adsense-account" content="ca-pub-9170218309467098">
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170218309467098"
-     crossorigin="anonymous"></script>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="google-site-verification" content="KBglfLasf-b1WivOBV4LVPZbQyVHCN9qqsDbuU83zyI">
+<!-- =========================
+     GOOGLE ADSENSE
+========================= -->
+
+<meta name="google-adsense-account" content="ca-pub-9170218309467098">
+
+<script async
+src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170218309467098"
+crossorigin="anonymous"></script>
+
+<!-- =========================
+     GOOGLE SEARCH CONSOLE
+========================= -->
+
+<meta name="google-site-verification"
+content="KBglfLasf-b1WivOBV4LVPZbQyVHCN9qqsDbuU83zyI">
+
+<!-- =========================
+     SEO
+========================= -->
 
 <title>Grego Music | Site Oficial</title>
 
+<meta name="description"
+content="Grego Music — Site Oficial. Ouça músicas, descubra novos lançamentos, acompanhe eventos, notícias e novidades do Grego Music.">
+
+<meta name="keywords"
+content="Grego Music, Grego Música, Grego Music site oficial, música angolana, músicas angolanas, artistas angolanos, novos lançamentos, música online">
+
+<meta name="author" content="Grego Music">
+
+<meta name="robots" content="index, follow">
+
+<meta name="theme-color" content="#00ff66">
+
+<link rel="canonical"
+href="https://gregomusic.github.io/Grego-music/">
+
+<!-- =========================
+     OPEN GRAPH
+========================= -->
+
+<meta property="og:type" content="website">
+
+<meta property="og:title"
+content="Grego Music | Site Oficial">
+
+<meta property="og:description"
+content="Ouça músicas, descubra lançamentos, eventos e novidades do Grego Music.">
+
+<meta property="og:url"
+content="https://gregomusic.github.io/Grego-music/">
+
+<meta property="og:site_name"
+content="Grego Music">
+
+<!-- =========================
+     TWITTER / X
+========================= -->
+
+<meta name="twitter:card" content="summary">
+
+<meta name="twitter:title"
+content="Grego Music | Site Oficial">
+
+<meta name="twitter:description"
+content="Site oficial do Grego Music. Música, eventos, novidades e lançamentos.">
+
+<!-- =========================
+     DADOS ESTRUTURADOS
+========================= -->
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"MusicGroup",
+  "name":"Grego Music",
+  "url":"https://gregomusic.github.io/Grego-music/",
+  "description":"Site oficial do Grego Music."
+}
+</script>
+
 <style>
+
+/* ========================================================
+   RESET
+======================================================== */
+
 *{
   box-sizing:border-box;
   margin:0;
   padding:0;
 }
 
+html{
+  scroll-behavior:smooth;
+}
+
 body{
-  font-family:Arial,sans-serif;
+  font-family:Arial,Helvetica,sans-serif;
   background:#0b0b0b;
   color:#fff;
   line-height:1.6;
 }
 
+/* ========================================================
+   HEADER
+======================================================== */
+
 header{
-  background:linear-gradient(135deg,#111,#191919);
-  padding:25px 15px;
+  background:
+    radial-gradient(circle at top,#1d1d1d,#0b0b0b 70%);
+  padding:35px 15px 30px;
   text-align:center;
   border-bottom:2px solid #00ff66;
 }
 
 header h1{
   color:#00ff66;
-  font-size:32px;
+  font-size:38px;
+  letter-spacing:2px;
   margin-bottom:5px;
 }
 
 header p{
-  color:#bbb;
+  color:#aaa;
+  font-size:16px;
 }
+
+/* ========================================================
+   NAVEGAÇÃO
+======================================================== */
 
 nav{
   display:flex;
   justify-content:center;
   flex-wrap:wrap;
-  gap:10px;
-  padding:15px;
+  gap:8px;
+  padding:12px;
   background:#111;
   position:sticky;
   top:0;
-  z-index:100;
+  z-index:1000;
+  border-bottom:1px solid #222;
 }
 
 nav button{
   background:#1b1b1b;
   color:#fff;
   border:1px solid #333;
-  padding:10px 15px;
+  padding:9px 13px;
   border-radius:8px;
   cursor:pointer;
+  font-size:14px;
 }
 
 nav button:hover{
@@ -70,11 +166,121 @@ nav button:hover{
   color:#00ff66;
 }
 
+/* ========================================================
+   CONTAINER
+======================================================== */
+
 .container{
-  max-width:900px;
+  max-width:1000px;
   margin:auto;
-  padding:20px 15px 80px;
+  padding:20px 15px 90px;
 }
+
+/* ========================================================
+   HERO
+======================================================== */
+
+.hero{
+  margin-top:10px;
+  padding:35px 20px;
+  border-radius:18px;
+  text-align:center;
+  background:
+    linear-gradient(135deg,#151515,#0f0f0f);
+  border:1px solid #292929;
+}
+
+.hero h2{
+  color:#00ff66;
+  font-size:28px;
+  margin-bottom:10px;
+}
+
+.hero p{
+  color:#bbb;
+  max-width:700px;
+  margin:auto;
+}
+
+.hero-buttons{
+  margin-top:20px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.main-button{
+  display:inline-block;
+  background:#00ff66;
+  color:#000;
+  padding:11px 17px;
+  border-radius:9px;
+  text-decoration:none;
+  font-weight:bold;
+  border:none;
+  cursor:pointer;
+}
+
+.secondary-button{
+  display:inline-block;
+  background:#222;
+  color:#fff;
+  padding:11px 17px;
+  border-radius:9px;
+  text-decoration:none;
+  border:1px solid #333;
+}
+
+/* ========================================================
+   SEÇÕES
+======================================================== */
+
+section{
+  margin-top:30px;
+  padding:22px;
+  background:#111;
+  border:1px solid #202020;
+  border-radius:16px;
+}
+
+section h2{
+  color:#00ff66;
+  margin-bottom:12px;
+  font-size:24px;
+}
+
+section h3{
+  color:#fff;
+  margin:12px 0 6px;
+}
+
+section p{
+  color:#bbb;
+  margin-bottom:10px;
+}
+
+/* ========================================================
+   ANÚNCIOS
+======================================================== */
+
+.ad{
+  min-height:90px;
+  margin:25px 0;
+  border:1px dashed #333;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#555;
+  font-size:13px;
+  text-align:center;
+  padding:15px;
+}
+
+/* ========================================================
+   PESQUISA
+======================================================== */
 
 .search-box{
   margin:15px 0;
@@ -94,6 +300,10 @@ nav button:hover{
 .search-box input:focus{
   border-color:#00ff66;
 }
+
+/* ========================================================
+   FILTROS
+======================================================== */
 
 .filters{
   display:flex;
@@ -115,6 +325,10 @@ nav button:hover{
   background:#00ff66;
   color:#000;
 }
+
+/* ========================================================
+   MÚSICA
+======================================================== */
 
 .music-card{
   background:#151515;
@@ -165,42 +379,141 @@ audio{
   color:#00ff66;
 }
 
-.ad{
-  min-height:90px;
-  margin:25px 0;
-  border:1px dashed #333;
-  border-radius:10px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#555;
-  font-size:13px;
+/* ========================================================
+   CARTÕES
+======================================================== */
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:15px;
 }
 
-section{
-  margin-top:35px;
-  padding:20px;
-  background:#111;
-  border-radius:15px;
+.card{
+  background:#171717;
+  border:1px solid #292929;
+  border-radius:14px;
+  padding:18px;
 }
 
-section h2{
+.card h3{
   color:#00ff66;
-  margin-bottom:10px;
 }
 
-footer{
-  text-align:center;
-  padding:25px 15px;
-  background:#090909;
-  color:#777;
-  border-top:1px solid #222;
+.card p{
+  color:#aaa;
 }
 
-.no-results{
-  text-align:center;
-  color:#888;
-  padding:30px;
+/* ========================================================
+   PLATAFORMAS
+======================================================== */
+
+.platforms{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.platform{
+  display:inline-block;
+  background:#202020;
+  color:#fff;
+  text-decoration:none;
+  padding:11px 15px;
+  border-radius:9px;
+  border:1px solid #333;
+}
+
+.platform:hover{
+  border-color:#00ff66;
+  color:#00ff66;
+}
+
+/* ========================================================
+   GALERIA
+======================================================== */
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:12px;
+}
+
+.gallery-item{
+  background:#191919;
+  border-radius:12px;
+  overflow:hidden;
+  border:1px solid #292929;
+}
+
+.gallery-item img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  display:block;
+}
+
+.gallery-item p{
+  padding:10px;
+  margin:0;
+  font-size:14px;
+}
+
+/* ========================================================
+   PARTILHA
+======================================================== */
+
+.share-box{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:15px;
+}
+
+.share-box button{
+  background:#222;
+  color:#fff;
+  border:1px solid #333;
+  border-radius:8px;
+  padding:10px 14px;
+  cursor:pointer;
+}
+
+.share-box button:hover{
+  background:#00ff66;
+  color:#000;
+}
+
+/* ========================================================
+   CONTACTO
+======================================================== */
+
+.contact-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:15px;
+}
+
+.contact-links a{
+  background:#202020;
+  color:#fff;
+  text-decoration:none;
+  padding:10px 14px;
+  border-radius:8px;
+  border:1px solid #333;
+}
+
+/* ========================================================
+   AVISOS
+======================================================== */
+
+.notice{
+  padding:15px;
+  background:#171717;
+  border-left:3px solid #00ff66;
+  border-radius:8px;
+  margin-top:12px;
 }
 
 .loading{
@@ -209,9 +522,70 @@ footer{
   color:#00ff66;
 }
 
+.no-results{
+  text-align:center;
+  color:#888;
+  padding:30px;
+}
+
+/* ========================================================
+   VOLTAR AO TOPO
+======================================================== */
+
+#topButton{
+  position:fixed;
+  right:15px;
+  bottom:15px;
+  width:45px;
+  height:45px;
+  border:none;
+  border-radius:50%;
+  background:#00ff66;
+  color:#000;
+  font-size:20px;
+  font-weight:bold;
+  cursor:pointer;
+  display:none;
+  z-index:2000;
+}
+
+/* ========================================================
+   FOOTER
+======================================================== */
+
+footer{
+  text-align:center;
+  padding:30px 15px;
+  background:#090909;
+  color:#777;
+  border-top:1px solid #222;
+}
+
+.footer-links{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+  margin:15px 0;
+}
+
+.footer-links a{
+  color:#aaa;
+  text-decoration:none;
+}
+
+.footer-links a:hover{
+  color:#00ff66;
+}
+
+/* ========================================================
+   MOBILE
+======================================================== */
+
 @media(max-width:600px){
+
   header h1{
-    font-size:27px;
+    font-size:28px;
   }
 
   .container{
@@ -219,416 +593,538 @@ footer{
     padding-right:10px;
   }
 
+  section{
+    padding:17px;
+  }
+
   .music-card{
     padding:15px;
   }
+
+  .hero h2{
+    font-size:24px;
+  }
+
+  nav{
+    justify-content:flex-start;
+    overflow-x:auto;
+  }
+
+  nav button{
+    flex-shrink:0;
+  }
+
 }
+
 </style>
+
 </head>
 
 <body>
 
+<!-- ======================================================
+     CABEÇALHO
+====================================================== -->
+
 <header>
+
   <h1>GREGO MUSIC</h1>
-  <p>Site Oficial</p>
+
+  <p>Site Oficial • Música • Eventos • Novidades</p>
+
 </header>
 
+
+<!-- ======================================================
+     MENU
+====================================================== -->
+
 <nav>
+
   <button onclick="irPara('inicio')">Início</button>
-  <button onclick="irPara('musicas')">Músicas</button>
-  <button onclick="irPara('sobre')">Sobre</button>
-  <button onclick="irPara('contacto')">Contacto</button>
+
+  <button onclick="irPara('musicas')">🎵 Músicas</button>
+
+  <button onclick="irPara('eventos')">📸 Eventos</button>
+
+  <button onclick="irPara('noticias')">📰 Notícias</button>
+
+  <button onclick="irPara('plataformas')">🌐 Plataformas</button>
+
+  <button onclick="irPara('sobre')">ℹ️ Sobre</button>
+
+  <button onclick="irPara('contacto')">📩 Contacto</button>
+
 </nav>
+
 
 <div class="container">
 
-<section id="inicio">
+
+<!-- ======================================================
+     INÍCIO
+====================================================== -->
+
+<section id="inicio" class="hero">
+
   <h2>🎵 Bem-vindo ao Grego Music</h2>
+
   <p>
-    Bem-vindo ao site oficial do Grego Music.
-    Aqui podes ouvir e descobrir as músicas disponíveis.
+    O espaço oficial do Grego Music para ouvir músicas,
+    acompanhar novos lançamentos, eventos, notícias e
+    novidades.
   </p>
+
+  <div class="hero-buttons">
+
+    <button
+      class="main-button"
+      onclick="irPara('musicas')">
+      🎧 Ouvir músicas
+    </button>
+
+    <button
+      class="secondary-button"
+      onclick="partilharSite()">
+      📤 Partilhar site
+    </button>
+
+  </div>
+
 </section>
 
+
+<!-- ======================================================
+     PUBLICIDADE 1
+====================================================== -->
+
 <div class="ad">
-  Espaço reservado para anúncios
+
+  Espaço preparado para anúncios do Google AdSense.
+
 </div>
 
+
+<!-- ======================================================
+     MÚSICAS
+====================================================== -->
+
 <section id="musicas">
+
   <h2>🎧 Músicas</h2>
 
+  <p>
+    Ouve os lançamentos disponíveis no Grego Music.
+    As músicas MP3 adicionadas ao repositório aparecem
+    automaticamente nesta página.
+  </p>
+
+
   <div class="search-box">
+
     <input
       type="text"
       id="pesquisa"
-      placeholder="Pesquisar música..."
-      oninput="mostrarMusicas()"
-    >
+      placeholder="Pesquisar música ou artista..."
+      oninput="mostrarMusicas()">
+
   </div>
+
 
   <div class="filters">
-    <button id="todasBtn" class="active" onclick="definirFiltro('todas')">
+
+    <button
+      id="todasBtn"
+      class="active"
+      onclick="definirFiltro('todas')">
+
       Todas
+
     </button>
 
-    <button id="favoritasBtn" onclick="definirFiltro('favoritas')">
+
+    <button
+      id="favoritasBtn"
+      onclick="definirFiltro('favoritas')">
+
       ❤️ Favoritas
+
     </button>
+
   </div>
+
 
   <div id="listaMusicas">
-    <div class="loading">A carregar músicas...</div>
+
+    <div class="loading">
+
+      A carregar músicas...
+
+    </div>
+
   </div>
+
 </section>
+
+
+<!-- ======================================================
+     PUBLICIDADE 2
+====================================================== -->
 
 <div class="ad">
-  Espaço reservado para anúncios
+
+  Espaço preparado para anúncios.
+
 </div>
+
+
+<!-- ======================================================
+     EVENTOS / FOTOS
+====================================================== -->
+
+<section id="eventos">
+
+  <h2>📸 Eventos e Galeria</h2>
+
+  <p>
+    Aqui serão apresentados eventos, atuações, bastidores
+    e fotografias do Grego Music.
+  </p>
+
+
+  <div class="gallery">
+
+    <!--
+      FUTURAS FOTOS DE EVENTOS
+
+      Exemplo:
+
+      <div class="gallery-item">
+
+        <img src="fotos/evento1.jpg"
+             alt="Grego Music em evento">
+
+        <p>Grego Music — Evento 2026</p>
+
+      </div>
+
+    -->
+
+    <div class="card">
+
+      <h3>📷 Galeria em preparação</h3>
+
+      <p>
+        As fotografias dos próximos eventos serão publicadas
+        aqui.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================================
+     NOTÍCIAS
+====================================================== -->
+
+<section id="noticias">
+
+  <h2>📰 Notícias e Novidades</h2>
+
+  <div class="cards">
+
+    <div class="card">
+
+      <h3>🎵 Novos lançamentos</h3>
+
+      <p>
+        Acompanha aqui os próximos lançamentos do
+        Grego Music.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <h3>🎤 Eventos</h3>
+
+      <p>
+        Fica atento às novidades sobre eventos,
+        atuações e apresentações.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <h3>🚀 Grego Music</h3>
+
+      <p>
+        Este espaço será atualizado com novidades
+        importantes do projeto.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================================
+     PLATAFORMAS
+====================================================== -->
+
+<section id="plataformas">
+
+  <h2>🌐 Grego Music nas plataformas</h2>
+
+  <p>
+    Quando os lançamentos estiverem disponíveis nas
+    plataformas digitais, os links oficiais poderão ser
+    colocados aqui.
+  </p>
+
+
+  <div class="platforms">
+
+    <!--
+      COLOCAREMOS OS LINKS REAIS QUANDO ESTIVEREM DISPONÍVEIS.
+
+      Exemplos de plataformas:
+
+      Spotify
+      YouTube
+      YouTube Music
+      Apple Music
+      Audiomack
+      Boomplay
+      TikTok
+      Facebook
+      Instagram
+    -->
+
+
+    <a
+      class="platform"
+      href="#"
+      onclick="linkAindaNaoDisponivel(event)">
+      🎧 Spotify
+    </a>
+
+
+    <a
+      class="platform"
+      href="#"
+      onclick="linkAindaNaoDisponivel(event)">
+      ▶️ YouTube
+    </a>
+
+
+    <a
+      class="platform"
+      href="#"
+      onclick="linkAindaNaoDisponivel(event)">
+      🎵 Audiomack
+    </a>
+
+
+    <a
+      class="platform"
+      href="#"
+      onclick="linkAindaNaoDisponivel(event)">
+      🎶 Boomplay
+    </a>
+
+
+    <a
+      class="platform"
+      href="#"
+      onclick="linkAindaNaoDisponivel(event)">
+      🍎 Apple Music
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================================
+     PARTILHA
+====================================================== -->
+
+<section>
+
+  <h2>📤 Partilhar Grego Music</h2>
+
+  <p>
+    Ajuda a divulgar o Grego Music. Podes partilhar o site
+    diretamente com amigos ou através das redes sociais.
+  </p>
+
+
+  <div class="share-box">
+
+    <button onclick="partilharSite()">
+      📤 Partilhar
+    </button>
+
+
+    <button onclick="copiarLink()">
+      🔗 Copiar link
+    </button>
+
+
+    <button onclick="partilharWhatsApp()">
+      💬 WhatsApp
+    </button>
+
+
+    <button onclick="partilharFacebook()">
+      Facebook
+    </button>
+
+  </div>
+
+
+  <div class="notice">
+
+    <strong>Para sites e blogues:</strong><br>
+
+    Este site foi preparado para permitir a divulgação
+    através de links e partilhas. Futuramente, quando
+    necessário, poderão ser adicionados códigos de
+    incorporação para músicas específicas.
+
+  </div>
+
+</section>
+
+
+<!-- ======================================================
+     SOBRE
+====================================================== -->
 
 <section id="sobre">
-  <h2>ℹ️ Sobre</h2>
+
+  <h2>ℹ️ Sobre o Grego Music</h2>
+
   <p>
-    O Grego Music é um espaço dedicado à música e à divulgação
-    de trabalhos musicais.
+    O Grego Music é um espaço dedicado à música,
+    divulgação de trabalhos musicais, lançamentos,
+    eventos e novidades.
   </p>
+
+  <p>
+    O objetivo é aproximar os ouvintes das músicas,
+    projetos e conteúdos oficiais do Grego Music.
+  </p>
+
 </section>
+
+
+<!-- ======================================================
+     CONTACTO
+====================================================== -->
 
 <section id="contacto">
+
   <h2>📩 Contacto</h2>
+
   <p>
-    Para contactos e informações, acompanha as atualizações
-    oficiais do Grego Music.
+    Para informações, parcerias, divulgação de eventos
+    ou assuntos relacionados com o Grego Music, utiliza
+    os canais oficiais disponibilizados.
   </p>
+
+
+  <div class="contact-links">
+
+    <!--
+      COLOCA AQUI OS LINKS REAIS DAS TUAS REDES SOCIAIS
+      QUANDO QUISERES PUBLICÁ-LOS.
+    -->
+
+
+    <a
+      href="#"
+      onclick="linkAindaNaoDisponivel(event)">
+      Facebook
+    </a>
+
+
+    <a
+      href="#"
+      onclick="linkAindaNaoDisponivel(event)">
+      Instagram
+    </a>
+
+
+    <a
+      href="#"
+      onclick="linkAindaNaoDisponivel(event)">
+      YouTube
+    </a>
+
+  </div>
+
 </section>
 
-<section>
-  <h2>🔒 Privacidade</h2>
+
+<!-- ======================================================
+     PRIVACIDADE
+====================================================== -->
+
+<section id="privacidade">
+
+  <h2>🔒 Política de Privacidade</h2>
+
   <p>
-    Este site pode utilizar tecnologias como cookies e anúncios
-    para melhorar a experiência dos visitantes.
+    O Grego Music respeita a privacidade dos visitantes.
+    Este site pode utilizar tecnologias como cookies,
+    armazenamento local, ferramentas de análise e
+    publicidade para melhorar a experiência do utilizador.
   </p>
+
+  <p>
+    Serviços de terceiros, incluindo ferramentas de
+    publicidade e análise, podem utilizar tecnologias
+    próprias de acordo com as suas políticas.
+  </p>
+
+  <p>
+    Os visitantes devem consultar as políticas dos
+    respetivos serviços para conhecer como os seus dados
+    podem ser tratados.
+  </p>
+
 </section>
 
-<section>
-  <h2>📄 Termos</h2>
+
+<!-- ======================================================
+     TERMOS
+====================================================== -->
+
+<section id="termos">
+
+  <h2>📄 Termos de Utilização</h2>
+
   <p>
-    O conteúdo disponibilizado neste site destina-se a fins
-    informativos e de entretenimento.
+    O conteúdo disponibilizado no Grego Music destina-se
+    à divulgação e apreciação de trabalhos musicais,
+    eventos e informações relacionadas com o projeto.
   </p>
-</section>
 
-</div>
-
-<footer>
-  © 2026 Grego Music — Todos os direitos reservados.
-</footer>
-
-<script>
-/*
-========================================================
-GREGO MUSIC
-CARREGAMENTO AUTOMÁTICO DAS MÚSICAS DO GITHUB
-========================================================
-*/
-
-const REPOSITORIO = "gregomusic/Grego-music";
-const BRANCH = "main";
-
-let musicas = [];
-let filtroAtual = "todas";
-
-/*
-Obtém todas as músicas MP3 existentes no repositório.
-Assim, no futuro não será necessário editar este código
-para cada nova música.
-*/
-
-async function carregarMusicas(){
-
-  const lista = document.getElementById("listaMusicas");
-
-  try{
-
-    const resposta = await fetch(
-      `https://api.github.com/repos/${REPOSITORIO}/git/trees/${BRANCH}?recursive=1`
-    );
-
-    if(!resposta.ok){
-      throw new Error("Não foi possível consultar o GitHub.");
-    }
-
-    const dados = await resposta.json();
-
-    if(!dados.tree){
-      throw new Error("Lista de ficheiros indisponível.");
-    }
-
-    musicas = dados.tree
-      .filter(item =>
-        item.type === "blob" &&
-        item.path.toLowerCase().endsWith(".mp3")
-      )
-      .map((item,index) => {
-
-        const nomeArquivo = item.path.split("/").pop();
-
-        let nome = nomeArquivo
-          .replace(/\.mp3$/i,"")
-          .replace(/_/g," ")
-          .replace(/-/g," ")
-          .replace(/\s+/g," ")
-          .trim();
-
-        return {
-          id:"musica_" + index,
-          nome:nome,
-          arquivo:item.path
-        };
-
-      });
-
-    mostrarMusicas();
-
-  }catch(erro){
-
-    console.error(erro);
-
-    lista.innerHTML = `
-      <div class="no-results">
-        Não foi possível carregar as músicas agora.
-        <br><br>
-        Tenta atualizar a página.
-      </div>
-    `;
-  }
-}
-
-
-/*
-Cria o endereço direto da música.
-*/
-
-function urlMusica(caminho){
-
-  return "https://raw.githubusercontent.com/" +
-    REPOSITORIO +
-    "/" +
-    BRANCH +
-    "/" +
-    caminho
-      .split("/")
-      .map(parte => encodeURIComponent(parte))
-      .join("/");
-}
-
-
-/*
-Mostra as músicas na página.
-*/
-
-function mostrarMusicas(){
-
-  const lista = document.getElementById("listaMusicas");
-
-  const pesquisa =
-    document.getElementById("pesquisa")
-      .value
-      .toLowerCase()
-      .trim();
-
-  const favoritas =
-    JSON.parse(localStorage.getItem("grego_favoritas") || "[]");
-
-  let resultado = musicas.filter(musica => {
-
-    const correspondePesquisa =
-      musica.nome.toLowerCase().includes(pesquisa);
-
-    const correspondeFavorito =
-      filtroAtual === "todas" ||
-      favoritas.includes(musica.id);
-
-    return correspondePesquisa && correspondeFavorito;
-  });
-
-  if(resultado.length === 0){
-
-    lista.innerHTML = `
-      <div class="no-results">
-        Nenhuma música encontrada.
-      </div>
-    `;
-
-    return;
-  }
-
-  lista.innerHTML = resultado.map(musica => {
-
-    const favorita = favoritas.includes(musica.id);
-
-    return `
-      <div class="music-card">
-
-        <h2>🎵 ${escaparHTML(musica.nome)}</h2>
-
-        <p>Grego Music</p>
-
-        <audio controls preload="metadata">
-          <source
-            src="${urlMusica(musica.arquivo)}"
-            type="audio/mpeg"
-          >
-          O teu navegador não suporta áudio.
-        </audio>
-
-        <div class="actions">
-
-          <button
-            class="favorite ${favorita ? "active" : ""}"
-            onclick="alternarFavorito('${musica.id}')"
-          >
-            ${favorita ? "❤️ Favorita" : "🤍 Favoritar"}
-          </button>
-
-          <button onclick="partilharMusica('${musica.nome}')">
-            📤 Partilhar
-          </button>
-
-        </div>
-
-      </div>
-    `;
-
-  }).join("");
-}
-
-
-/*
-Favoritos
-*/
-
-function alternarFavorito(id){
-
-  let favoritas =
-    JSON.parse(localStorage.getItem("grego_favoritas") || "[]");
-
-  if(favoritas.includes(id)){
-
-    favoritas =
-      favoritas.filter(item => item !== id);
-
-  }else{
-
-    favoritas.push(id);
-
-  }
-
-  localStorage.setItem(
-    "grego_favoritas",
-    JSON.stringify(favoritas)
-  );
-
-  mostrarMusicas();
-}
-
-
-/*
-Filtro
-*/
-
-function definirFiltro(tipo){
-
-  filtroAtual = tipo;
-
-  document
-    .getElementById("todasBtn")
-    .classList.toggle("active", tipo === "todas");
-
-  document
-    .getElementById("favoritasBtn")
-    .classList.toggle("active", tipo === "favoritas");
-
-  mostrarMusicas();
-}
-
-
-/*
-Partilha
-*/
-
-async function partilharMusica(nome){
-
-  const dados = {
-    title: nome + " | Grego Music",
-    text: "Ouça esta música no Grego Music",
-    url: window.location.href
-  };
-
-  try{
-
-    if(navigator.share){
-
-      await navigator.share(dados);
-
-    }else{
-
-      await navigator.clipboard.writeText(
-        window.location.href
-      );
-
-      alert("Link copiado!");
-
-    }
-
-  }catch(erro){
-
-    console.log("Partilha cancelada.");
-
-  }
-}
-
-
-/*
-Navegação
-*/
-
-function irPara(id){
-
-  const elemento = document.getElementById(id);
-
-  if(elemento){
-
-    elemento.scrollIntoView({
-      behavior:"smooth"
-    });
-
-  }
-}
-
-
-/*
-Proteção simples para nomes dos ficheiros.
-*/
-
-function escaparHTML(texto){
-
-  return texto
-    .replace(/&/g,"&amp;")
-    .replace(/</g,"&lt;")
-    .replace(/>/g,"&gt;")
-    .replace(/"/g,"&quot;")
-    .replace(/'/g,"&#039;");
-
-}
-
-
-/*
-INICIAR
-*/
-
-carregarMusicas();
-
-</script>
-
-</body>
-     </html>
+  <p>
+    Não é permitida a utilização indevida, cópia,
+    redistribuição ou exploração comercial de conteúdos
+    protegidos sem autorização dos respetivos titulares.
+  </p>
+
+  <p>
+    Os c
