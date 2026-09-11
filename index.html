@@ -66,68 +66,194 @@ body{
 }
 
 header{
-  background:radial-gradient(circle at top,#202020,#0b0b0b 70%);
+  background:
+    radial-gradient(circle at center top,#252525 0%,#111 45%,#080808 100%);
   padding:35px 15px 28px;
   text-align:center;
   border-bottom:2px solid #00ff66;
+  overflow:hidden;
 }
 
 header h1{
   color:#00ff66;
   font-size:36px;
   letter-spacing:2px;
-}
-
-/* =====================================
-   GRAFISMO / EQUALIZADOR
-===================================== */
-
-.equalizer{
-  height:42px;
-  margin:18px auto 12px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:5px;
-}
-
-.equalizer span{
-  display:block;
-  width:5px;
-  height:15px;
-  background:#00ff66;
-  border-radius:5px;
-  box-shadow:0 0 8px #00ff66;
-  animation:equalizar 1s ease-in-out infinite;
-}
-
-.equalizer span:nth-child(1){animation-delay:.05s}
-.equalizer span:nth-child(2){animation-delay:.15s}
-.equalizer span:nth-child(3){animation-delay:.25s}
-.equalizer span:nth-child(4){animation-delay:.35s}
-.equalizer span:nth-child(5){animation-delay:.45s}
-.equalizer span:nth-child(6){animation-delay:.55s}
-.equalizer span:nth-child(7){animation-delay:.45s}
-.equalizer span:nth-child(8){animation-delay:.35s}
-.equalizer span:nth-child(9){animation-delay:.25s}
-.equalizer span:nth-child(10){animation-delay:.15s}
-.equalizer span:nth-child(11){animation-delay:.05s}
-
-@keyframes equalizar{
-  0%,100%{
-    height:10px;
-    opacity:.65;
-  }
-
-  50%{
-    height:38px;
-    opacity:1;
-  }
+  text-shadow:0 0 12px rgba(0,255,102,.35);
 }
 
 header p{
   color:#aaa;
 }
+
+/* =====================================
+   GRAFISMO DE ESTÚDIO
+   AURICULAR + ONDA SONORA
+===================================== */
+
+.studio-graphic{
+  position:relative;
+  width:230px;
+  height:120px;
+  margin:18px auto 14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* arco do auricular */
+
+.headphone-arc{
+  position:absolute;
+  width:178px;
+  height:100px;
+  border:7px solid #00ff66;
+  border-bottom:0;
+  border-radius:100px 100px 0 0;
+  top:4px;
+  left:26px;
+  box-shadow:
+    0 0 10px rgba(0,255,102,.45),
+    inset 0 0 10px rgba(0,255,102,.12);
+}
+
+/* lado esquerdo */
+
+.ear-left,
+.ear-right{
+  position:absolute;
+  width:30px;
+  height:57px;
+  background:#151515;
+  border:5px solid #00ff66;
+  border-radius:12px;
+  top:57px;
+  box-shadow:0 0 10px rgba(0,255,102,.35);
+}
+
+.ear-left{
+  left:13px;
+}
+
+.ear-right{
+  right:13px;
+}
+
+/* almofadas */
+
+.ear-left:after,
+.ear-right:after{
+  content:"";
+  position:absolute;
+  width:12px;
+  height:28px;
+  background:#00ff66;
+  opacity:.28;
+  border-radius:8px;
+  top:10px;
+  left:4px;
+}
+
+/* onda sonora central */
+
+.sound-wave{
+  position:absolute;
+  width:105px;
+  height:55px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:4px;
+  z-index:5;
+}
+
+.sound-wave span{
+  width:4px;
+  border-radius:5px;
+  background:#00ff66;
+  box-shadow:0 0 8px #00ff66;
+  animation:soundWave 1s ease-in-out infinite;
+}
+
+.sound-wave span:nth-child(1){
+  height:13px;
+  animation-delay:.05s;
+}
+
+.sound-wave span:nth-child(2){
+  height:24px;
+  animation-delay:.12s;
+}
+
+.sound-wave span:nth-child(3){
+  height:38px;
+  animation-delay:.19s;
+}
+
+.sound-wave span:nth-child(4){
+  height:20px;
+  animation-delay:.26s;
+}
+
+.sound-wave span:nth-child(5){
+  height:48px;
+  animation-delay:.33s;
+}
+
+.sound-wave span:nth-child(6){
+  height:30px;
+  animation-delay:.40s;
+}
+
+.sound-wave span:nth-child(7){
+  height:45px;
+  animation-delay:.47s;
+}
+
+.sound-wave span:nth-child(8){
+  height:22px;
+  animation-delay:.54s;
+}
+
+.sound-wave span:nth-child(9){
+  height:35px;
+  animation-delay:.61s;
+}
+
+.sound-wave span:nth-child(10){
+  height:15px;
+  animation-delay:.68s;
+}
+
+@keyframes soundWave{
+
+  0%,100%{
+    transform:scaleY(.55);
+    opacity:.55;
+  }
+
+  50%{
+    transform:scaleY(1);
+    opacity:1;
+  }
+
+}
+
+/* pequeno brilho central */
+
+.studio-graphic:after{
+  content:"";
+  position:absolute;
+  width:75px;
+  height:75px;
+  border-radius:50%;
+  background:#00ff66;
+  opacity:.04;
+  filter:blur(15px);
+}
+
+/* =====================================
+   NAVEGAÇÃO
+===================================== */
 
 nav{
   display:flex;
@@ -156,6 +282,10 @@ nav a:hover{
   color:#00ff66;
   border-color:#00ff66;
 }
+
+/* =====================================
+   ESTRUTURA
+===================================== */
 
 .container{
   max-width:1000px;
@@ -236,6 +366,10 @@ button:hover,
   color:#000;
 }
 
+/* =====================================
+   ANÚNCIOS
+===================================== */
+
 .ad{
   min-height:90px;
   margin:25px 0;
@@ -247,6 +381,10 @@ button:hover,
   color:#555;
   text-align:center;
 }
+
+/* =====================================
+   PESQUISA
+===================================== */
 
 .search-box{
   margin:15px 0;
@@ -279,6 +417,10 @@ button:hover,
   color:#000;
 }
 
+/* =====================================
+   MÚSICAS
+===================================== */
+
 .music-card{
   background:#151515;
   border:1px solid #292929;
@@ -305,6 +447,16 @@ audio{
   color:#00ff66;
 }
 
+.no-results{
+  text-align:center;
+  color:#888;
+  padding:30px;
+}
+
+/* =====================================
+   CARTÕES
+===================================== */
+
 .cards{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -326,11 +478,9 @@ audio{
   color:#aaa;
 }
 
-.no-results{
-  text-align:center;
-  color:#888;
-  padding:30px;
-}
+/* =====================================
+   RODAPÉ
+===================================== */
 
 footer{
   text-align:center;
@@ -353,6 +503,10 @@ footer{
   text-decoration:none;
 }
 
+/* =====================================
+   VOLTAR AO TOPO
+===================================== */
+
 #topButton{
   position:fixed;
   right:15px;
@@ -368,14 +522,20 @@ footer{
   z-index:2000;
 }
 
+/* =====================================
+   TELEMÓVEL
+===================================== */
+
 @media(max-width:600px){
 
   header h1{
     font-size:27px;
   }
 
-  .equalizer{
-    margin-top:15px;
+  .studio-graphic{
+    transform:scale(.88);
+    margin-top:12px;
+    margin-bottom:5px;
   }
 
   nav{
@@ -402,18 +562,28 @@ footer{
 
   <h1>GRÉGO MUSIC OFICIAL</h1>
 
-  <div class="equalizer" aria-label="Grégo Music">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
+  <div class="studio-graphic" aria-label="Auricular de estúdio com onda sonora">
+
+    <div class="headphone-arc"></div>
+
+    <div class="ear-left"></div>
+    <div class="ear-right"></div>
+
+    <div class="sound-wave">
+
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </div>
+
   </div>
 
   <p>Site Oficial • Música • Eventos • Novidades</p>
@@ -1040,186 +1210,4 @@ function mostrarMusicas(){
 
 function definirFiltro(filtro){
 
-  filtroAtual = filtro;
-
-  document
-    .getElementById("todasBtn")
-    .classList.toggle(
-      "active",
-      filtro === "todas"
-    );
-
-  document
-    .getElementById("favoritasBtn")
-    .classList.toggle(
-      "active",
-      filtro === "favoritas"
-    );
-
-  mostrarMusicas();
-
-}
-
-
-/* =====================================
-   COPIAR
-===================================== */
-
-async function copiarTexto(texto){
-
-  try{
-
-    await navigator.clipboard.writeText(texto);
-
-    alert("Link copiado!");
-
-  }catch(e){
-
-    prompt("Copia este link:",texto);
-
-  }
-
-}
-
-
-function copiarLink(){
-
-  copiarTexto(window.location.href);
-
-}
-
-
-/* =====================================
-   PARTILHAR SITE
-===================================== */
-
-function partilharSite(){
-
-  const dados = {
-
-    title:"Grégo Music Oficial",
-
-    text:
-      "Visita o site oficial do Grégo Music.",
-
-    url:
-      window.location.href
-
-  };
-
-
-  if(navigator.share){
-
-    navigator.share(dados).catch(()=>{});
-
-  }else{
-
-    copiarLink();
-
-  }
-
-}
-
-
-/* =====================================
-   PARTILHAR MÚSICA
-===================================== */
-
-function partilharMusica(nome,url){
-
-  const dados = {
-
-    title:
-      nome + " — Grégo Music Oficial",
-
-    text:
-      "Ouve esta música no Grégo Music Oficial.",
-
-    url:url
-
-  };
-
-
-  if(navigator.share){
-
-    navigator.share(dados).catch(()=>{});
-
-  }else{
-
-    copiarTexto(url);
-
-  }
-
-}
-
-
-/* =====================================
-   WHATSAPP
-===================================== */
-
-function partilharWhatsApp(){
-
-  const texto =
-    encodeURIComponent(
-      "Visita o Grégo Music Oficial: "
-      + window.location.href
-    );
-
-  window.open(
-    "https://wa.me/?text=" + texto,
-    "_blank"
-  );
-
-}
-
-
-/* =====================================
-   FACEBOOK
-===================================== */
-
-function partilharFacebook(){
-
-  const url =
-    encodeURIComponent(
-      window.location.href
-    );
-
-  window.open(
-    "https://www.facebook.com/sharer/sharer.php?u="
-    + url,
-    "_blank"
-  );
-
-}
-
-
-/* =====================================
-   BOTÃO VOLTAR AO TOPO
-===================================== */
-
-window.addEventListener(
-  "scroll",
-  () => {
-
-    const botao =
-      document.getElementById("topButton");
-
-    botao.style.display =
-      window.scrollY > 350
-      ? "block"
-      : "none";
-
-  }
-);
-
-
-/* =====================================
-   INICIAR
-===================================== */
-
-mostrarMusicas();
-
-</script>
-
-</body>
-  </html>
+  filtroAtual = filt
