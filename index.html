@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Grégo Music Oficial — Site Oficial</title>
 
-<meta name="description" content="Grégo Music Oficial — Site Oficial. Ouça músicas, descubra novidades e acompanhe o Grégo Music online.">
-<meta name="keywords" content="Grégo Music, Grego Music, música angolana, ouvir música online, músicas angolanas, Clã Yakuza">
-<meta name="author" content="Grégo Music">
+<meta name="description" content="Grégo Music Oficial — músicas, novidades, downloads, comentários e muito mais.">
 
 <link rel="canonical" href="https://gregomusic.github.io/Grego-music/">
 
-<meta name="google-site-verification" content="KBglfLasf-b1WivOBV4LVPZbQyVHCN9qqsDbuU83zyI">
-<meta name="google-adsense-account" content="ca-pub-9170218309467098">
+<meta name="google-site-verification"
+content="KBglfLasf-b1WivOBV4LVPZbQyVHCN9qqsDbuU83zyI">
+
+<meta name="google-adsense-account"
+content="ca-pub-9170218309467098">
 
 <script async
 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170218309467098"
 crossorigin="anonymous"></script>
 
 <style>
+
 *{
 box-sizing:border-box;
 margin:0;
@@ -31,15 +34,19 @@ scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial,Helvetica,sans-serif;
+font-family:Arial,sans-serif;
 background:#08090d;
 color:#fff;
 line-height:1.6;
 }
 
 a{
-text-decoration:none;
 color:inherit;
+text-decoration:none;
+}
+
+button,input,textarea{
+font-family:inherit;
 }
 
 header{
@@ -53,7 +60,7 @@ border-bottom:2px solid #25d366;
 .header-inner{
 max-width:1100px;
 margin:auto;
-padding:16px;
+padding:15px;
 display:flex;
 align-items:center;
 justify-content:space-between;
@@ -61,27 +68,27 @@ gap:15px;
 }
 
 .logo{
-font-size:20px;
-font-weight:900;
 color:#25d366;
+font-weight:bold;
+font-size:20px;
 }
 
 .logo small{
 display:block;
 font-size:9px;
-letter-spacing:2px;
 color:#fff;
+letter-spacing:2px;
 }
 
 nav{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
-gap:5px;
+gap:4px;
 }
 
 nav a{
-font-size:12px;
+font-size:11px;
 padding:7px 9px;
 border-radius:20px;
 }
@@ -91,122 +98,46 @@ background:#25d366;
 color:#000;
 }
 
-/* HERO */
+section{
+max-width:1100px;
+margin:auto;
+padding:50px 15px;
+}
 
 .hero{
-min-height:560px;
+min-height:520px;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding:50px 15px;
-background:radial-gradient(circle,#12351f 0%,#08090d 60%);
-}
-
-.hero-content{
-max-width:800px;
-}
-
-.graphic{
-width:230px;
-height:145px;
-margin:auto;
-position:relative;
-}
-
-.headphone{
-position:absolute;
-width:185px;
-height:120px;
-left:22px;
-top:5px;
-border:12px solid #25d366;
-border-bottom:0;
-border-radius:110px 110px 0 0;
-filter:drop-shadow(0 0 12px rgba(37,211,102,.5));
-}
-
-.headphone:before,
-.headphone:after{
-content:"";
-position:absolute;
-width:27px;
-height:62px;
-background:#25d366;
-top:68px;
-border-radius:15px;
-}
-
-.headphone:before{
-left:-19px;
-}
-
-.headphone:after{
-right:-19px;
-}
-
-.sound-wave{
-position:absolute;
-left:55px;
-top:58px;
-width:120px;
-height:65px;
-display:flex;
-align-items:center;
-justify-content:center;
-gap:4px;
-}
-
-.sound-wave span{
-width:5px;
-background:#fff;
-border-radius:5px;
-animation:wave 1s infinite alternate;
-}
-
-.sound-wave span:nth-child(1){height:18px}
-.sound-wave span:nth-child(2){height:30px}
-.sound-wave span:nth-child(3){height:45px}
-.sound-wave span:nth-child(4){height:27px}
-.sound-wave span:nth-child(5){height:57px}
-.sound-wave span:nth-child(6){height:35px}
-.sound-wave span:nth-child(7){height:48px}
-.sound-wave span:nth-child(8){height:25px}
-.sound-wave span:nth-child(9){height:40px}
-
-@keyframes wave{
-from{transform:scaleY(.55)}
-to{transform:scaleY(1)}
+background:radial-gradient(circle,#12351f,#08090d 65%);
 }
 
 .hero h1{
-font-size:clamp(36px,8vw,65px);
+font-size:clamp(38px,9vw,70px);
 color:#25d366;
-text-transform:uppercase;
-letter-spacing:2px;
 }
 
 .hero h2{
-font-size:19px;
-margin-bottom:12px;
+font-size:20px;
 }
 
 .hero p{
 color:#aaa;
 max-width:650px;
-margin:0 auto 22px;
+margin:15px auto 25px;
 }
 
 .btn{
 display:inline-block;
-padding:12px 20px;
-margin:4px;
-border-radius:25px;
+border:0;
 background:#25d366;
 color:#000;
+padding:11px 18px;
+border-radius:25px;
 font-weight:bold;
-border:0;
 cursor:pointer;
+margin:4px;
 }
 
 .btn-dark{
@@ -215,17 +146,9 @@ color:#fff;
 border:1px solid #333;
 }
 
-/* GERAL */
-
-section{
-max-width:1100px;
-margin:auto;
-padding:55px 15px;
-}
-
 .section-title{
 text-align:center;
-margin-bottom:28px;
+margin-bottom:25px;
 }
 
 .section-title h2{
@@ -239,7 +162,7 @@ color:#888;
 
 .ad-box{
 max-width:900px;
-min-height:80px;
+min-height:70px;
 margin:20px auto;
 border:1px dashed #333;
 border-radius:12px;
@@ -249,13 +172,11 @@ justify-content:center;
 color:#555;
 }
 
-/* MÚSICAS */
-
 .music-tools{
 display:flex;
 flex-wrap:wrap;
-gap:10px;
-margin-bottom:25px;
+gap:8px;
+margin-bottom:20px;
 }
 
 #pesquisa{
@@ -269,12 +190,8 @@ color:#fff;
 outline:none;
 }
 
-#pesquisa:focus{
-border-color:#25d366;
-}
-
 .filter-btn{
-padding:12px 17px;
+padding:11px 15px;
 border-radius:25px;
 border:1px solid #333;
 background:#11141a;
@@ -288,6 +205,24 @@ background:#25d366;
 color:#000;
 }
 
+.status{
+padding:13px;
+margin-bottom:20px;
+border-radius:12px;
+background:#11141a;
+border:1px solid #292e36;
+color:#999;
+text-align:center;
+}
+
+.status.ok{
+color:#25d366;
+}
+
+.status.error{
+color:#ff6b6b;
+}
+
 .music-list{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -298,7 +233,7 @@ gap:18px;
 background:#11141a;
 border:1px solid #292e36;
 border-radius:18px;
-padding:20px;
+padding:18px;
 }
 
 .music-card:hover{
@@ -306,45 +241,79 @@ border-color:#25d366;
 }
 
 .music-icon{
-width:55px;
-height:55px;
+width:52px;
+height:52px;
 border-radius:50%;
 background:#25d366;
 color:#000;
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:25px;
-margin-bottom:14px;
+font-size:24px;
+margin-bottom:12px;
 }
 
 .music-card h3{
 font-size:18px;
+word-break:break-word;
 }
 
-.music-card p{
-color:#999;
+.music-card .artist{
 font-size:13px;
-margin-bottom:14px;
+color:#888;
+margin-bottom:12px;
 }
 
-audio{
+.music-card audio{
 width:100%;
 height:42px;
 }
 
+.stats{
+display:flex;
+flex-wrap:wrap;
+gap:7px;
+margin-top:12px;
+}
+
+.stat{
+font-size:11px;
+padding:5px 8px;
+border-radius:12px;
+background:#181c23;
+color:#aaa;
+}
+
 .music-actions{
 display:flex;
+flex-wrap:wrap;
 align-items:center;
-justify-content:space-between;
-margin-top:10px;
+gap:7px;
+margin-top:12px;
+}
+
+.action-btn{
+border:1px solid #333;
+background:#151820;
+color:#fff;
+border-radius:20px;
+padding:8px 11px;
+cursor:pointer;
+font-size:12px;
+}
+
+.action-btn:hover,
+.action-btn.liked{
+background:#25d366;
+color:#000;
 }
 
 .favorite{
+margin-left:auto;
 background:none;
 border:0;
-color:#888;
-font-size:26px;
+font-size:25px;
+color:#777;
 cursor:pointer;
 }
 
@@ -352,24 +321,56 @@ cursor:pointer;
 color:#ff3155;
 }
 
-/* CARDS */
+.comment-box{
+margin-top:15px;
+display:none;
+}
+
+.comment-box textarea{
+width:100%;
+min-height:70px;
+padding:10px;
+border-radius:10px;
+border:1px solid #333;
+background:#08090d;
+color:#fff;
+resize:vertical;
+}
+
+.comment-list{
+margin-top:10px;
+}
+
+.comment{
+padding:9px;
+margin-top:6px;
+background:#181c23;
+border-radius:10px;
+font-size:13px;
+}
+
+.comment small{
+display:block;
+color:#666;
+margin-top:3px;
+}
 
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-gap:18px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
 }
 
 .card{
 background:#11141a;
 border:1px solid #292e36;
 border-radius:18px;
-padding:22px;
+padding:20px;
 }
 
 .card h3{
 color:#25d366;
-margin-bottom:7px;
+margin-bottom:8px;
 }
 
 .card p{
@@ -377,11 +378,9 @@ color:#aaa;
 font-size:14px;
 }
 
-/* PLATAFORMAS */
-
 .platform-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 gap:15px;
 }
 
@@ -395,12 +394,11 @@ text-align:center;
 
 .platform:hover{
 border-color:#25d366;
-transform:translateY(-3px);
 }
 
 .platform-icon{
-font-size:34px;
-margin-bottom:8px;
+font-size:32px;
+margin-bottom:7px;
 }
 
 .platform p{
@@ -408,28 +406,19 @@ color:#888;
 font-size:13px;
 }
 
-/* PARTILHA */
-
 .share-box{
 background:#11141a;
 border:1px solid #292e36;
-border-radius:20px;
-padding:30px 20px;
+border-radius:18px;
+padding:25px;
 text-align:center;
 }
-
-.share-box p{
-color:#aaa;
-margin-bottom:15px;
-}
-
-/* FOOTER */
 
 footer{
 background:#050609;
 border-top:1px solid #222;
-text-align:center;
 padding:35px 15px;
+text-align:center;
 }
 
 footer strong{
@@ -442,25 +431,6 @@ font-size:13px;
 margin-top:8px;
 }
 
-.footer-links{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:14px;
-margin-top:15px;
-}
-
-.footer-links a{
-color:#aaa;
-font-size:13px;
-}
-
-.footer-links a:hover{
-color:#25d366;
-}
-
-/* TOPO */
-
 #topButton{
 position:fixed;
 right:18px;
@@ -470,15 +440,11 @@ height:45px;
 border:0;
 border-radius:50%;
 background:#25d366;
-color:#000;
-font-size:20px;
-font-weight:bold;
-cursor:pointer;
 display:none;
+cursor:pointer;
+font-size:20px;
 z-index:999;
 }
-
-/* MOBILE */
 
 @media(max-width:700px){
 
@@ -491,28 +457,18 @@ font-size:10px;
 padding:6px;
 }
 
-.hero{
-min-height:530px;
 }
 
-.graphic{
-transform:scale(.85);
-}
-
-section{
-padding:45px 12px;
-}
-
-}
 </style>
 </head>
 
 <body>
 
 <header>
+
 <div class="header-inner">
 
-<a href="#inicio" class="logo">
+<a class="logo" href="#inicio">
 GRÉGO MUSIC OFICIAL
 <small>SITE OFICIAL</small>
 </a>
@@ -528,46 +484,30 @@ GRÉGO MUSIC OFICIAL
 </nav>
 
 </div>
+
 </header>
+
 
 <main>
 
-<!-- INÍCIO -->
-
 <section class="hero" id="inicio">
 
-<div class="hero-content">
+<div>
 
-<div class="graphic">
+<h1>GRÉGO MUSIC</h1>
 
-<div class="headphone"></div>
-
-<div class="sound-wave">
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-</div>
-
-</div>
-
-<h1>Grégo Music</h1>
-
-<h2>Site Oficial</h2>
+<h2>SITE OFICIAL</h2>
 
 <p>
-Descobre músicas, novidades, lançamentos e acompanha
-o universo musical do Grégo Music.
+Ouve músicas, faz downloads, deixa o teu like,
+comenta e partilha.
 </p>
 
-<a class="btn" href="#musicas">🎵 Ouvir músicas</a>
+<a href="#musicas" class="btn">
+🎵 Ouvir músicas
+</a>
 
-<a class="btn btn-dark" href="#plataformas">
+<a href="#plataformas" class="btn btn-dark">
 🌐 Plataformas
 </a>
 
@@ -575,12 +515,11 @@ o universo musical do Grégo Music.
 
 </section>
 
+
 <div class="ad-box">
 Espaço para publicidade
 </div>
 
-
-<!-- MÚSICAS -->
 
 <section id="musicas">
 
@@ -589,212 +528,47 @@ Espaço para publicidade
 <h2>🎵 Músicas</h2>
 
 <p>
-Ouve diretamente as músicas do Grégo Music
+Biblioteca atualizada automaticamente pelo GitHub.
 </p>
 
 </div>
 
+
 <div class="music-tools">
 
 <input
-type="search"
 id="pesquisa"
+type="search"
 placeholder="Pesquisar música ou artista..."
 >
 
 <button
-class="filter-btn active"
 id="todasBtn"
-type="button"
->
+class="filter-btn active">
 Todas
 </button>
 
 <button
-class="filter-btn"
 id="favoritasBtn"
-type="button"
->
+class="filter-btn">
 ❤️ Favoritas
 </button>
 
-</div>
-
-
-<div class="music-list" id="listaMusicas">
-
-
-<!-- MÚSICA 1 -->
-
-<article class="music-card">
-
-<div class="music-icon">🎵</div>
-
-<h3>Grego M</h3>
-
-<p>Grégo Music</p>
-
-<audio controls preload="metadata">
-<source src="Grego_M_.mp3" type="audio/mpeg">
-O teu navegador não suporta áudio.
-</audio>
-
-<div class="music-actions">
-
-<span style="color:#777;font-size:12px;">
-Grégo Music
-</span>
-
 <button
-class="favorite"
-type="button"
-data-id="1"
->
-♡
+id="atualizarBtn"
+class="filter-btn">
+🔄 Atualizar
 </button>
 
 </div>
 
-</article>
 
-
-<!-- MÚSICA 2 -->
-
-<article class="music-card">
-
-<div class="music-icon">🎵</div>
-
-<h3>Mudança</h3>
-
-<p>Grégo Music feat. Clã Yakuza</p>
-
-<audio controls preload="metadata">
-<source src="New_Version_feat_Clã_Yakuza_mudança_(Prodby_ND_Studio).mp3" type="audio/mpeg">
-O teu navegador não suporta áudio.
-</audio>
-
-<div class="music-actions">
-
-<span style="color:#777;font-size:12px;">
-Grégo Music
-</span>
-
-<button
-class="favorite"
-type="button"
-data-id="2"
->
-♡
-</button>
-
+<div id="musicStatus" class="status">
+🔄 A carregar músicas...
 </div>
 
-</article>
 
-
-<!-- MÚSICA 3 -->
-
-<article class="music-card">
-
-<div class="music-icon">🎵</div>
-
-<h3>Planos</h3>
-
-<p>Grégo Music</p>
-
-<audio controls preload="metadata">
-<source src="New_Version_planos_(Prodby_ND-Studio).mp3" type="audio/mpeg">
-O teu navegador não suporta áudio.
-</audio>
-
-<div class="music-actions">
-
-<span style="color:#777;font-size:12px;">
-Grégo Music
-</span>
-
-<button
-class="favorite"
-type="button"
-data-id="3"
->
-♡
-</button>
-
-</div>
-
-</article>
-
-
-<!-- MÚSICA 4 -->
-
-<article class="music-card">
-
-<div class="music-icon">🎵</div>
-
-<h3>Outro Lado</h3>
-
-<p>Djhon</p>
-
-<audio controls preload="metadata">
-<source src="Djhon_outro_lado_(prodby_ND-Studio).mp3" type="audio/mpeg">
-O teu navegador não suporta áudio.
-</audio>
-
-<div class="music-actions">
-
-<span style="color:#777;font-size:12px;">
-Grégo Music
-</span>
-
-<button
-class="favorite"
-type="button"
-data-id="4"
->
-♡
-</button>
-
-</div>
-
-</article>
-
-
-<!-- MÚSICA 5 -->
-
-<article class="music-card">
-
-<div class="music-icon">🎵</div>
-
-<h3>Choros</h3>
-
-<p>Grégo Music</p>
-
-<audio controls preload="metadata">
-<source src="Choros .mp3" type="audio/mpeg">
-O teu navegador não suporta áudio.
-</audio>
-
-<div class="music-actions">
-
-<span style="color:#777;font-size:12px;">
-Grégo Music
-</span>
-
-<button
-class="favorite"
-type="button"
-data-id="5"
->
-♡
-</button>
-
-</div>
-
-</article>
-
-
-</div>
+<div id="listaMusicas" class="music-list"></div>
 
 </section>
 
@@ -804,39 +578,31 @@ Espaço para publicidade
 </div>
 
 
-<!-- EVENTOS -->
-
 <section id="eventos">
 
 <div class="section-title">
 
-<h2>📸 Eventos & Momentos</h2>
+<h2>📸 Eventos</h2>
 
-<p>Acompanha as novidades do Grégo Music</p>
+<p>Momentos e apresentações.</p>
 
 </div>
 
 <div class="cards">
 
 <div class="card">
-<h3>🎤 Música</h3>
-<p>
-Novos sons, projetos e lançamentos.
-</p>
+<h3>🎤 Shows</h3>
+<p>Espaço para futuros eventos.</p>
+</div>
+
+<div class="card">
+<h3>📸 Galeria</h3>
+<p>Fotos e momentos do projeto.</p>
 </div>
 
 <div class="card">
 <h3>🔥 Novidades</h3>
-<p>
-Fica atento aos próximos conteúdos.
-</p>
-</div>
-
-<div class="card">
-<h3>📅 Eventos</h3>
-<p>
-Espaço para futuros eventos e apresentações.
-</p>
+<p>Novos conteúdos serão publicados aqui.</p>
 </div>
 
 </div>
@@ -844,15 +610,13 @@ Espaço para futuros eventos e apresentações.
 </section>
 
 
-<!-- NOTÍCIAS -->
-
 <section id="noticias">
 
 <div class="section-title">
 
 <h2>📰 Notícias</h2>
 
-<p>Novidades do Grégo Music</p>
+<p>Novidades do Grégo Music.</p>
 
 </div>
 
@@ -861,21 +625,15 @@ Espaço para futuros eventos e apresentações.
 <div class="card">
 <h3>🎶 Novos sons</h3>
 <p>
-Acompanha os próximos lançamentos musicais.
+As músicas novas podem aparecer automaticamente
+na biblioteca.
 </p>
 </div>
 
 <div class="card">
-<h3>🚀 Grégo Music</h3>
+<h3>🚀 Projeto</h3>
 <p>
-O projeto continua a crescer com novos conteúdos.
-</p>
-</div>
-
-<div class="card">
-<h3>🌍 Música angolana</h3>
-<p>
-Música, cultura e identidade num só espaço.
+O Grégo Music continua em desenvolvimento.
 </p>
 </div>
 
@@ -884,32 +642,26 @@ Música, cultura e identidade num só espaço.
 </section>
 
 
-<!-- PLATAFORMAS -->
-
 <section id="plataformas">
 
 <div class="section-title">
 
-<h2>🌐 Plataformas Oficiais</h2>
+<h2>🌐 Plataformas</h2>
 
-<p>Encontra o Grégo Music online</p>
+<p>Acompanha o projeto online.</p>
 
 </div>
 
 <div class="platform-grid">
 
-
 <a
 class="platform"
 href="https://youtube.com/@familiayakuza-1?si=7s0p5vKVUujzO7Gc"
 target="_blank"
-rel="noopener noreferrer"
->
+rel="noopener noreferrer">
 
 <div class="platform-icon">▶️</div>
-
 <h3>YouTube</h3>
-
 <p>Família Yakuza</p>
 
 </a>
@@ -919,13 +671,10 @@ rel="noopener noreferrer"
 class="platform"
 href="https://www.tiktok.com/@famlia.cl.yakuza"
 target="_blank"
-rel="noopener noreferrer"
->
+rel="noopener noreferrer">
 
 <div class="platform-icon">🎵</div>
-
 <h3>TikTok</h3>
-
 <p>@famlia.cl.yakuza</p>
 
 </a>
@@ -935,13 +684,10 @@ rel="noopener noreferrer"
 class="platform"
 href="https://www.facebook.com/tarciositaki.calvagante"
 target="_blank"
-rel="noopener noreferrer"
->
+rel="noopener noreferrer">
 
 <div class="platform-icon">📘</div>
-
 <h3>Facebook</h3>
-
 <p>Página oficial</p>
 
 </a>
@@ -951,38 +697,30 @@ rel="noopener noreferrer"
 class="platform"
 href="https://audiomack.com/smduasmodas"
 target="_blank"
-rel="noopener noreferrer"
->
+rel="noopener noreferrer">
 
 <div class="platform-icon">🎧</div>
-
 <h3>Audiomack</h3>
-
-<p>Ouvir no Audiomack</p>
+<p>Ouvir músicas</p>
 
 </a>
-
 
 </div>
 
 </section>
 
 
-<!-- SOBRE -->
-
 <section id="sobre">
 
 <div class="section-title">
-
-<h2>ℹ️ Sobre o Grégo Music</h2>
-
+<h2>ℹ️ Sobre</h2>
 </div>
 
 <div class="card">
 
 <p>
 O Grégo Music é uma plataforma dedicada à música,
-novidades, lançamentos e conteúdos do universo artístico
+lançamentos, novidades e conteúdos do universo
 do Grégo Music e da Família Yakuza.
 </p>
 
@@ -991,55 +729,39 @@ do Grégo Music e da Família Yakuza.
 </section>
 
 
-<!-- CONTACTO -->
-
 <section id="contacto">
 
 <div class="section-title">
 
-<h2>📲 Contacto & Partilha</h2>
-
-<p>Partilha o site com os teus amigos</p>
-
-</div>
-
-<div class="share-box">
+<h2>📲 Partilhar</h2>
 
 <p>
 Ajuda o Grégo Music a chegar a mais pessoas.
 </p>
 
-<button
-class="btn"
-id="shareBtn"
-type="button"
->
-📤 Partilhar site
+</div>
+
+<div class="share-box">
+
+<button id="shareBtn" class="btn">
+📤 Partilhar
 </button>
 
-<button
-class="btn btn-dark"
-id="copyBtn"
-type="button"
->
+<button id="copyBtn" class="btn btn-dark">
 🔗 Copiar link
 </button>
 
 <a
-class="btn"
 id="whatsappBtn"
-target="_blank"
-rel="noopener noreferrer"
->
+class="btn"
+target="_blank">
 💬 WhatsApp
 </a>
 
 <a
-class="btn btn-dark"
 id="facebookShareBtn"
-target="_blank"
-rel="noopener noreferrer"
->
+class="btn btn-dark"
+target="_blank">
 📘 Facebook
 </a>
 
@@ -1047,8 +769,6 @@ rel="noopener noreferrer"
 
 </section>
 
-
-<!-- PRIVACIDADE -->
 
 <section>
 
@@ -1059,51 +779,9 @@ rel="noopener noreferrer"
 <div class="card">
 
 <p>
-Este site utiliza tecnologias necessárias para oferecer
-uma melhor experiência ao visitante. Serviços de publicidade
-podem utilizar cookies de acordo com as respetivas políticas.
-</p>
-
-</div>
-
-</section>
-
-
-<!-- TERMOS -->
-
-<section>
-
-<div class="section-title">
-<h2>📄 Termos</h2>
-</div>
-
-<div class="card">
-
-<p>
-Os conteúdos deste site destinam-se à divulgação musical
-e artística. Respeitamos os direitos dos respetivos autores,
-artistas e produtores.
-</p>
-
-</div>
-
-</section>
-
-
-<!-- DIREITOS -->
-
-<section>
-
-<div class="section-title">
-<h2>© Direitos de Autor</h2>
-</div>
-
-<div class="card">
-
-<p>
-Todo o conteúdo pertence aos respetivos titulares.
-Não reproduzas ou distribuas conteúdos protegidos
-sem autorização.
+Este site pode registar informações estatísticas
+sobre visitas, reproduções, downloads, curtidas,
+partilhas e comentários para melhorar o serviço.
 </p>
 
 </div>
@@ -1121,237 +799,801 @@ sem autorização.
 Música • Cultura • Novidades • Família Yakuza
 </p>
 
-<div class="footer-links">
-
-<a href="#inicio">Início</a>
-<a href="#musicas">Músicas</a>
-<a href="#plataformas">Plataformas</a>
-<a href="#sobre">Sobre</a>
-<a href="#contacto">Contacto</a>
-
-</div>
-
 <p>
-© <span id="ano"></span> Grégo Music. Todos os direitos reservados.
+© <span id="ano"></span> Grégo Music.
+Todos os direitos reservados.
 </p>
 
 </footer>
 
 
-<button id="topButton" type="button">↑</button>
+<button id="topButton">↑</button>
 
 
 <script>
 
-/* PESQUISA */
+/* =====================================================
+   CONFIGURAÇÃO
+   ===================================================== */
 
-const pesquisa = document.getElementById("pesquisa");
-
-pesquisa.addEventListener("input", function(){
-
-const termo = pesquisa.value.toLowerCase().trim();
-
-document.querySelectorAll(".music-card").forEach(function(card){
-
-const texto = card.innerText.toLowerCase();
-
-card.style.display =
-texto.includes(termo) ? "" : "block";
-
-if(!texto.includes(termo)){
-card.style.display="none";
-}
-
-});
-
-});
+const GITHUB_OWNER = "gregomusic";
+const GITHUB_REPO = "Grego-music";
+const GITHUB_BRANCH = "main";
 
 
-/* FAVORITOS */
+/*
+   IMPORTANTE:
+   Estes dois valores precisam ser substituídos
+   pelos dados públicos do teu projeto Supabase.
+*/
+
+const SUPABASE_URL =
+"COLOCAR_AQUI_PROJECT_URL";
+
+const SUPABASE_KEY =
+"COLOCAR_AQUI_PUBLISHABLE_KEY";
+
+
+/* =====================================================
+   GITHUB
+   ===================================================== */
+
+const GITHUB_API =
+`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/git/trees/${GITHUB_BRANCH}?recursive=1`;
+
+const RAW_BASE =
+`https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${GITHUB_BRANCH}/`;
+
+
+let musicas = [];
 
 let favoritos = [];
 
+let mostrarFavoritas = false;
+
 try{
+
 favoritos =
-JSON.parse(localStorage.getItem("gregoFavoritos")) || [];
+JSON.parse(
+localStorage.getItem("gregoFavoritas")
+) || [];
+
 }catch(e){
-favoritos=[];
-}
 
-document.querySelectorAll(".favorite").forEach(function(botao){
-
-const id = Number(botao.dataset.id);
-
-if(favoritos.includes(id)){
-botao.classList.add("active");
-botao.textContent="♥";
-}
-
-botao.addEventListener("click",function(){
-
-if(favoritos.includes(id)){
-
-favoritos =
-favoritos.filter(function(item){
-return item !== id;
-});
-
-botao.classList.remove("active");
-botao.textContent="♡";
-
-}else{
-
-favoritos.push(id);
-
-botao.classList.add("active");
-botao.textContent="♥";
+favoritos = [];
 
 }
+
+
+/* =====================================================
+   SUPABASE
+   ===================================================== */
+
+function supabaseConfigurado(){
+
+return (
+SUPABASE_URL &&
+SUPABASE_KEY &&
+!SUPABASE_URL.includes("COLOCAR_AQUI") &&
+!SUPABASE_KEY.includes("COLOCAR_AQUI")
+);
+
+}
+
+
+async function supabaseRequest(
+table,
+method="GET",
+body=null,
+query=""
+){
+
+if(!supabaseConfigurado()){
+
+return null;
+
+}
+
+
+const options = {
+
+method:method,
+
+headers:{
+
+"apikey":SUPABASE_KEY,
+
+"Authorization":
+"Bearer " + SUPABASE_KEY,
+
+"Content-Type":
+"application/json",
+
+"Prefer":
+"return=representation"
+
+}
+
+};
+
+
+if(body){
+
+options.body =
+JSON.stringify(body);
+
+}
+
 
 try{
-localStorage.setItem(
-"gregoFavoritos",
-JSON.stringify(favoritos)
+
+const resposta =
+await fetch(
+`${SUPABASE_URL}/rest/v1/${table}${query}`,
+options
 );
-}catch(e){}
+
+if(!resposta.ok){
+
+console.warn(
+"Supabase:",
+resposta.status,
+await resposta.text()
+);
+
+return null;
+
+}
+
+return await resposta.json();
+
+}catch(error){
+
+console.warn(
+"Erro Supabase:",
+error
+);
+
+return null;
+
+}
+
+}
+
+
+/* =====================================================
+   ESCAPAR HTML
+   ===================================================== */
+
+function escapeHTML(text){
+
+return String(text)
+.replace(/&/g,"&amp;")
+.replace(/</g,"&lt;")
+.replace(/>/g,"&gt;")
+.replace(/"/g,"&quot;")
+.replace(/'/g,"&#039;");
+
+}
+
+
+/* =====================================================
+   ID
+   ===================================================== */
+
+function idMusica(path){
+
+return path
+.toLowerCase()
+.replace(/[^a-z0-9]+/g,"-")
+.replace(/^-|-$/g,"");
+
+}
+
+
+/* =====================================================
+   NOME
+   ===================================================== */
+
+function nomeMusica(path){
+
+return path
+.split("/")
+.pop()
+.replace(/\.[^/.]+$/,"")
+.replace(/_/g," ")
+.replace(/-/g," ")
+.replace(/\s+/g," ")
+.trim();
+
+}
+
+
+/* =====================================================
+   REGISTAR EVENTO
+   ===================================================== */
+
+async function registrarEvento(
+musicId,
+eventType
+){
+
+if(!supabaseConfigurado()) return;
+
+
+/*
+  eventType esperado:
+  play
+  download
+  share
+  visit
+*/
+
+await supabaseRequest(
+"music_events",
+"POST",
+{
+
+music_id:musicId,
+
+event_type:eventType
+
+}
+);
+
+}
+
+
+/* =====================================================
+   VISITA
+   ===================================================== */
+
+async function registrarVisita(){
+
+if(!supabaseConfigurado()) return;
+
+await registrarEvento(
+null,
+"visit"
+);
+
+}
+
+
+/* =====================================================
+   CARREGAR MÚSICAS
+   ===================================================== */
+
+async function carregarMusicas(){
+
+const status =
+document.getElementById("musicStatus");
+
+status.className =
+"status";
+
+status.textContent =
+"🔄 A procurar músicas novas no GitHub...";
+
+
+try{
+
+const resposta =
+await fetch(
+GITHUB_API +
+"&cacheBust=" +
+Date.now()
+);
+
+
+if(!resposta.ok){
+
+throw new Error(
+"Erro GitHub " +
+resposta.status
+);
+
+}
+
+
+const dados =
+await resposta.json();
+
+
+const arquivos =
+dados.tree.filter(function(item){
+
+return (
+item.type === "blob" &&
+/\.mp3$/i.test(item.path)
+);
 
 });
 
-});
 
+arquivos.sort(function(a,b){
 
-/* TODAS */
-
-document.getElementById("todasBtn").addEventListener("click",function(){
-
-document.querySelectorAll(".music-card").forEach(function(card){
-card.style.display="";
-});
-
-pesquisa.value="";
-
-document.getElementById("todasBtn").classList.add("active");
-document.getElementById("favoritasBtn").classList.remove("active");
+return a.path.localeCompare(
+b.path,
+"pt",
+{
+numeric:true,
+sensitivity:"base"
+}
+);
 
 });
 
 
-/* FAVORITAS */
+musicas =
+arquivos.map(function(item){
 
-document.getElementById("favoritasBtn").addEventListener("click",function(){
+return {
 
-document.querySelectorAll(".music-card").forEach(function(card){
+id:idMusica(item.path),
+
+path:item.path,
+
+filename:
+item.path.split("/").pop(),
+
+title:
+nomeMusica(item.path),
+
+artist:
+"Grégo Music",
+
+url:
+RAW_BASE +
+item.path
+.split("/")
+.map(encodeURIComponent)
+.join("/")
+
+};
+
+});
+
+
+renderizarMusicas();
+
+
+status.className =
+"status ok";
+
+status.textContent =
+"✅ " +
+musicas.length +
+" músicas encontradas automaticamente.";
+
+}catch(error){
+
+console.error(error);
+
+status.className =
+"status error";
+
+status.textContent =
+"❌ Não foi possível carregar as músicas.";
+
+}
+
+}
+
+
+/* =====================================================
+   ESTATÍSTICAS DA MÚSICA
+   ===================================================== */
+
+async function carregarStats(musica){
+
+if(!supabaseConfigurado()) return;
+
+
+const eventos =
+await supabaseRequest(
+"music_events",
+"GET",
+null,
+`?music_id=eq.${encodeURIComponent(musica.id)}&select=event_type`
+);
+
+
+if(!eventos) return;
+
+
+let plays = 0;
+let downloads = 0;
+let shares = 0;
+
+
+eventos.forEach(function(evento){
+
+if(evento.event_type === "play")
+plays++;
+
+if(evento.event_type === "download")
+downloads++;
+
+if(evento.event_type === "share")
+shares++;
+
+});
+
+
+const card =
+document.querySelector(
+`[data-id="${CSS.escape(musica.id)}"]`
+);
+
+
+if(!card) return;
+
+
+const stats =
+card.querySelector(".stats");
+
+
+if(stats){
+
+stats.innerHTML = `
+
+<span class="stat">
+▶️ ${plays} reproduções
+</span>
+
+<span class="stat">
+⬇️ ${downloads} downloads
+</span>
+
+<span class="stat">
+📤 ${shares} partilhas
+</span>
+
+`;
+
+}
+
+}
+
+
+/* =====================================================
+   LIKES
+   ===================================================== */
+
+async function carregarLikes(
+musica,
+card
+){
+
+if(!supabaseConfigurado()) return;
+
+
+const likes =
+await supabaseRequest(
+"music_likes",
+"GET",
+null,
+`?music_id=eq.${encodeURIComponent(musica.id)}&select=id`
+);
+
+
+const contador =
+card.querySelector(
+".like-count"
+);
+
+
+if(contador){
+
+contador.textContent =
+likes ? likes.length : 0;
+
+}
+
+}
+
+
+/* =====================================================
+   RENDER
+   ===================================================== */
+
+function renderizarMusicas(){
+
+const lista =
+document.getElementById(
+"listaMusicas"
+);
+
+const termo =
+document.getElementById(
+"pesquisa"
+).value
+.toLowerCase()
+.trim();
+
+
+const filtradas =
+musicas.filter(function(musica){
+
+const pesquisa =
+musica.title
+.toLowerCase()
+.includes(termo) ||
+
+musica.filename
+.toLowerCase()
+.includes(termo);
+
+
+const favorito =
+!mostrarFavoritas ||
+favoritos.includes(musica.id);
+
+
+return pesquisa && favorito;
+
+});
+
+
+if(!filtradas.length){
+
+lista.innerHTML = `
+
+<div class="card">
+
+<h3>🔎 Nenhuma música encontrada</h3>
+
+<p>
+Não encontramos resultados para a tua pesquisa.
+</p>
+
+</div>
+
+`;
+
+return;
+
+}
+
+
+lista.innerHTML =
+filtradas.map(function(musica){
+
+const favorito =
+favoritos.includes(musica.id);
+
+
+return `
+
+<article
+class="music-card"
+data-id="${escapeHTML(musica.id)}"
+>
+
+<div class="music-icon">
+🎵
+</div>
+
+<h3>
+${escapeHTML(musica.title)}
+</h3>
+
+<div class="artist">
+${escapeHTML(musica.artist)}
+</div>
+
+
+<audio
+controls
+preload="metadata"
+data-play="${escapeHTML(musica.id)}"
+>
+
+<source
+src="${musica.url}"
+type="audio/mpeg">
+
+</audio>
+
+
+<div class="stats">
+
+<span class="stat">
+▶️ 0 reproduções
+</span>
+
+<span class="stat">
+⬇️ 0 downloads
+</span>
+
+<span class="stat">
+📤 0 partilhas
+</span>
+
+<span class="stat">
+❤️ <span class="like-count">0</span>
+</span>
+
+</div>
+
+
+<div class="music-actions">
+
+<button
+class="action-btn like-btn"
+data-like="${escapeHTML(musica.id)}">
+❤️ Curtir
+</button>
+
+
+<a
+class="action-btn"
+href="${musica.url}"
+download="${escapeHTML(musica.filename)}"
+data-download="${escapeHTML(musica.id)}">
+⬇️ Download
+</a>
+
+
+<button
+class="action-btn share-music"
+data-share="${escapeHTML(musica.id)}">
+📤 Partilhar
+</button>
+
+
+<button
+class="action-btn comment-toggle">
+💬 Comentários
+</button>
+
+
+<button
+class="favorite ${favorito ? "active" : ""}"
+data-favorite="${escapeHTML(musica.id)}">
+${favorito ? "♥" : "♡"}
+</button>
+
+</div>
+
+
+<div class="comment-box">
+
+<textarea
+placeholder="Escreve um comentário..."
+></textarea>
+
+<button
+class="btn send-comment"
+data-comment="${escapeHTML(musica.id)}">
+Enviar comentário
+</button>
+
+<div class="comment-list"></div>
+
+</div>
+
+
+</article>
+
+`;
+
+}).join("");
+
+
+ligarEventos();
+
+}
+
+
+/* =====================================================
+   EVENTOS DOS CARTÕES
+   ===================================================== */
+
+function ligarEventos(){
+
+document
+.querySelectorAll("[data-play]")
+.forEach(function(audio){
+
+audio.addEventListener(
+"play",
+function(){
 
 const id =
-Number(card.querySelector(".favorite").dataset.id);
+audio.dataset.play;
 
-card.style.display =
-favoritos.includes(id) ? "" : "none";
-
-});
-
-document.getElementById("favoritasBtn").classList.add("active");
-document.getElementById("todasBtn").classList.remove("active");
-
-});
-
-
-/* PARTILHA */
-
-const site =
-"https://gregomusic.github.io/Grego-music/";
-
-document.getElementById("shareBtn").addEventListener("click",async function(){
-
-if(navigator.share){
-
-try{
-
-await navigator.share({
-title:"Grégo Music Oficial",
-text:"Visita o site oficial do Grégo Music:",
-url:site
-});
-
-}catch(e){}
-
-}else{
-
-navigator.clipboard.writeText(site);
-
-alert("Link copiado!");
-
-}
-
-});
-
-
-/* COPIAR */
-
-document.getElementById("copyBtn").addEventListener("click",function(){
-
-navigator.clipboard.writeText(site)
-.then(function(){
-
-alert("Link copiado com sucesso!");
-
-})
-.catch(function(){
-
-prompt("Copia o link:",site);
-
-});
-
-});
-
-
-/* WHATSAPP */
-
-document.getElementById("whatsappBtn").href =
-"https://wa.me/?text="+
-encodeURIComponent(
-"Visita o site oficial do Grégo Music: "+site
+registrarEvento(
+id,
+"play"
 );
 
-
-/* FACEBOOK */
-
-document.getElementById("facebookShareBtn").href =
-"https://www.facebook.com/sharer/sharer.php?u="+
-encodeURIComponent(site);
-
-
-/* ANO */
-
-document.getElementById("ano").textContent =
-new Date().getFullYear();
-
-
-/* VOLTAR AO TOPO */
-
-const topButton =
-document.getElementById("topButton");
-
-window.addEventListener("scroll",function(){
-
-if(window.scrollY>400){
-topButton.style.display="block";
-}else{
-topButton.style.display="none";
+},
+{
+once:true
 }
+);
 
 });
 
-topButton.addEventListener("click",function(){
 
-window.scrollTo({
-top:0,
-behavior:"smooth"
+document
+.querySelectorAll("[data-download]")
+.forEach(function(link){
+
+link.addEventListener(
+"click",
+function(){
+
+registrarEvento(
+link.dataset.download,
+"download"
+);
+
+}
+);
+
 });
 
+
+document
+.querySelectorAll(".share-music")
+.forEach(function(botao){
+
+botao.addEventListener(
+"click",
+function(){
+
+partilharMusica(
+botao.dataset.share
+);
+
+}
+);
+
 });
 
-</script>
 
-</body>
-    </html>
+document
+.querySelectorAll(".like-btn")
+.forEach(function(botao){
+
+botao.addEventListener(
+"click",
+function(){
+
+darLike(
+botao.dataset.like,
+botao
+);
+
+}
+);
+
+});
+
+
+document
+.querySelectorAll("[data-favorite]")
+.forEach(function(botao){
+
+botao.addEventListener(
+"click",
+function(){
+
+alternarFavorito(
+botao.dataset.favorite
+);
+
+}
+);
+
+});
+
+
+document
+.querySelectorAll(".comment-toggle")
+.forEach(function(botao){
+
+    
