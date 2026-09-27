@@ -6,7 +6,7 @@
 
 <title>Grégo Music Oficial — Site Oficial</title>
 
-<meta name="description" content="Grégo Music Oficial — músicas, novidades, eventos, plataformas e conteúdos oficiais.">
+<meta name="description" content="Grégo Music Oficial — músicas, novidades, eventos, plataformas, comentários e conteúdos oficiais.">
 <meta name="keywords" content="Grego Music, Grégo Music Oficial, Grego Yakuza, Clã Yakuza, música angolana">
 <meta name="author" content="Grégo Music Oficial">
 <meta name="robots" content="index,follow">
@@ -14,7 +14,7 @@
 <link rel="canonical" href="https://gregomusic.github.io/Grego-music/">
 
 <meta property="og:title" content="Grégo Music Oficial">
-<meta property="og:description" content="Site oficial do Grégo Music. Ouça músicas, acompanhe novidades e encontre as plataformas oficiais.">
+<meta property="og:description" content="Ouça músicas, comente, partilhe e acompanhe as novidades do Grégo Music.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://gregomusic.github.io/Grego-music/">
 
@@ -24,17 +24,19 @@ src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pu
 crossorigin="anonymous"></script>
 
 <style>
+
 :root{
-  --bg:#070707;
-  --bg2:#0d0d0d;
-  --card:#121212;
-  --card2:#181818;
+  --bg:#050505;
+  --bg2:#0b0b0b;
+  --card:#111;
+  --card2:#171717;
   --green:#00ff66;
-  --green-dark:#00b84a;
-  --text:#fff;
-  --muted:#aaa;
+  --green2:#00c853;
+  --white:#fff;
+  --muted:#999;
   --border:#292929;
   --red:#ff4545;
+  --gold:#ffd740;
 }
 
 *{
@@ -48,11 +50,13 @@ html{
 }
 
 body{
-  background:var(--bg);
-  color:var(--text);
+  background:
+    radial-gradient(circle at top,rgba(0,255,102,.045),transparent 30%),
+    var(--bg);
+  color:var(--white);
   font-family:Arial,Helvetica,sans-serif;
   line-height:1.5;
-  padding-bottom:90px;
+  padding-bottom:95px;
 }
 
 a{
@@ -74,7 +78,7 @@ img{
   max-width:100%;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 
 header{
   position:sticky;
@@ -82,38 +86,38 @@ header{
   z-index:1000;
   background:rgba(0,0,0,.96);
   border-bottom:1px solid var(--border);
-  backdrop-filter:blur(10px);
+  backdrop-filter:blur(12px);
 }
 
 .header{
   max-width:1200px;
   margin:auto;
-  padding:13px 16px;
+  padding:12px 15px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:15px;
+  gap:12px;
 }
 
 .logo{
   color:var(--green);
-  font-size:19px;
   font-weight:900;
+  font-size:18px;
   white-space:nowrap;
 }
 
 nav{
   display:flex;
-  flex-wrap:wrap;
   justify-content:center;
-  gap:5px;
+  flex-wrap:wrap;
+  gap:4px;
 }
 
 nav a{
-  padding:8px 10px;
-  border-radius:8px;
   color:#ddd;
-  font-size:13px;
+  padding:7px 9px;
+  border-radius:8px;
+  font-size:12px;
 }
 
 nav a:hover{
@@ -121,18 +125,20 @@ nav a:hover{
   color:#000;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 
 .hero{
-  min-height:450px;
-  padding:70px 18px;
+  min-height:470px;
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
+  padding:70px 16px;
   background:
-  radial-gradient(circle at center,rgba(0,255,102,.14),transparent 48%),
-  linear-gradient(#111,#070707);
+    radial-gradient(circle at center,
+      rgba(0,255,102,.17),
+      transparent 45%),
+    linear-gradient(#111,#050505);
 }
 
 .hero-inner{
@@ -140,8 +146,8 @@ nav a:hover{
 }
 
 .logo-mark{
-  width:120px;
-  height:120px;
+  width:125px;
+  height:125px;
   border:3px solid var(--green);
   border-radius:50%;
   margin:0 auto 22px;
@@ -149,13 +155,15 @@ nav a:hover{
   align-items:center;
   justify-content:center;
   color:var(--green);
-  font-size:32px;
+  font-size:36px;
   font-weight:900;
-  box-shadow:0 0 35px rgba(0,255,102,.18);
+  box-shadow:
+    0 0 25px rgba(0,255,102,.16),
+    inset 0 0 25px rgba(0,255,102,.08);
 }
 
 .hero h1{
-  font-size:clamp(35px,8vw,68px);
+  font-size:clamp(38px,9vw,70px);
   line-height:1;
   margin-bottom:16px;
 }
@@ -166,16 +174,16 @@ nav a:hover{
 
 .hero p{
   color:#ccc;
-  max-width:700px;
+  max-width:720px;
   margin:auto;
 }
 
 .hero-buttons{
-  margin-top:27px;
   display:flex;
   justify-content:center;
   flex-wrap:wrap;
   gap:10px;
+  margin-top:28px;
 }
 
 .btn{
@@ -185,7 +193,7 @@ nav a:hover{
   color:#000;
   padding:12px 18px;
   border-radius:10px;
-  font-weight:700;
+  font-weight:800;
 }
 
 .btn.outline{
@@ -193,12 +201,16 @@ nav a:hover{
   color:var(--green);
 }
 
-/* CONTAINER */
+.btn:hover{
+  transform:translateY(-1px);
+}
+
+/* ================= CONTAINER ================= */
 
 .container{
   max-width:1200px;
   margin:auto;
-  padding:45px 16px;
+  padding:45px 15px;
 }
 
 section{
@@ -213,26 +225,53 @@ section{
 .title h2{
   color:var(--green);
   font-size:30px;
-  margin-bottom:6px;
+  margin-bottom:5px;
 }
 
 .title p{
   color:var(--muted);
 }
 
-/* SEARCH */
+/* ================= PUBLICIDADE ================= */
+
+.ad-area{
+  max-width:1100px;
+  min-height:90px;
+  margin:20px auto;
+  border:1px dashed #333;
+  border-radius:12px;
+  background:#090909;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  overflow:hidden;
+}
+
+.ad-label{
+  color:#555;
+  font-size:11px;
+  letter-spacing:1px;
+}
+
+/*
+ O Google AdSense Auto Ads pode utilizar estas áreas.
+ Não foi inventado nenhum data-ad-slot.
+*/
+
+/* ================= SEARCH ================= */
 
 .search{
-  max-width:700px;
+  max-width:720px;
   margin:0 auto 25px;
 }
 
 .search input{
   width:100%;
-  background:#111;
+  background:#101010;
   color:#fff;
   border:1px solid var(--border);
-  border-radius:10px;
+  border-radius:11px;
   padding:14px;
   outline:none;
 }
@@ -241,12 +280,12 @@ section{
   border-color:var(--green);
 }
 
-/* STATS */
+/* ================= STATS ================= */
 
 .stats{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:12px;
+  gap:10px;
   margin-bottom:28px;
 }
 
@@ -254,7 +293,7 @@ section{
   background:var(--card);
   border:1px solid var(--border);
   border-radius:12px;
-  padding:17px;
+  padding:15px 8px;
   text-align:center;
 }
 
@@ -265,53 +304,59 @@ section{
 }
 
 .stat span{
-  color:#999;
-  font-size:12px;
+  color:#888;
+  font-size:11px;
 }
 
-/* MUSIC */
+/* ================= MUSIC ================= */
 
 .music-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(285px,1fr));
-  gap:18px;
+  grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+  gap:17px;
 }
 
 .music-card{
-  background:linear-gradient(145deg,#161616,#0d0d0d);
+  background:
+    linear-gradient(145deg,#171717,#0b0b0b);
   border:1px solid var(--border);
-  border-radius:15px;
-  padding:17px;
+  border-radius:16px;
+  padding:16px;
+  transition:.2s;
 }
 
 .music-card:hover{
-  border-color:var(--green-dark);
+  border-color:var(--green2);
+  transform:translateY(-2px);
 }
 
 .cover{
   height:145px;
-  border-radius:12px;
-  margin-bottom:15px;
+  border-radius:13px;
+  margin-bottom:14px;
   background:
-  radial-gradient(circle,rgba(0,255,102,.20),transparent 60%),
-  #090909;
-  border:1px solid #222;
+    radial-gradient(circle,
+      rgba(0,255,102,.22),
+      transparent 58%),
+    #080808;
+  border:1px solid #252525;
   display:flex;
   align-items:center;
   justify-content:center;
   color:var(--green);
-  font-size:43px;
+  font-size:44px;
 }
 
 .music-card h3{
   font-size:18px;
-  margin-bottom:4px;
+  margin-bottom:3px;
 }
 
 .artist{
   color:#888;
   font-size:13px;
-  margin-bottom:13px;
+  margin-bottom:12px;
 }
 
 .play-button{
@@ -321,8 +366,13 @@ section{
   color:#000;
   padding:12px;
   border-radius:9px;
-  font-weight:bold;
+  font-weight:900;
   margin-bottom:9px;
+}
+
+.play-button.playing{
+  background:#111;
+  color:var(--green);
 }
 
 .actions{
@@ -336,8 +386,8 @@ section{
   border:1px solid #2b2b2b;
   color:#ddd;
   border-radius:8px;
-  padding:9px 4px;
-  font-size:12px;
+  padding:9px 3px;
+  font-size:11px;
 }
 
 .action:hover,
@@ -354,7 +404,7 @@ section{
   margin-top:10px;
 }
 
-/* PLAYER */
+/* ================= CUSTOM PLAYER ================= */
 
 .player{
   position:fixed;
@@ -362,10 +412,11 @@ section{
   right:0;
   bottom:0;
   z-index:3000;
-  background:rgba(7,7,7,.98);
+  background:rgba(5,5,5,.98);
   border-top:2px solid var(--green);
-  padding:10px 14px;
+  padding:10px 12px;
   display:none;
+  box-shadow:0 -5px 25px rgba(0,0,0,.5);
 }
 
 .player.visible{
@@ -375,10 +426,14 @@ section{
 .player-inner{
   max-width:1100px;
   margin:auto;
-  display:grid;
-  grid-template-columns:1fr 1.8fr auto;
-  gap:12px;
+}
+
+.player-top{
+  display:flex;
   align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom:8px;
 }
 
 .now-playing{
@@ -388,52 +443,114 @@ section{
 .now-playing small{
   color:#777;
   display:block;
+  font-size:10px;
 }
 
 .now-playing strong{
+  display:block;
   color:#fff;
   white-space:nowrap;
   overflow:hidden;
   text-overflow:ellipsis;
-  display:block;
+  font-size:14px;
 }
 
-.player audio{
+.close-player{
+  background:#181818;
+  border:1px solid #333;
+  color:#aaa;
+  border-radius:7px;
+  padding:5px 8px;
+}
+
+.progress{
   width:100%;
-  margin:0;
+  height:5px;
+  accent-color:var(--green);
+  cursor:pointer;
 }
 
-.next-button{
+.player-controls{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  margin-top:8px;
+}
+
+.player-btn{
+  width:42px;
+  height:36px;
   background:#171717;
-  border:1px solid var(--green);
-  color:var(--green);
-  padding:9px 13px;
+  border:1px solid #333;
+  color:#fff;
   border-radius:8px;
 }
 
-/* CONTENT */
+.player-btn.main{
+  background:var(--green);
+  color:#000;
+  border-color:var(--green);
+}
+
+.time{
+  color:#777;
+  font-size:11px;
+  min-width:75px;
+  text-align:center;
+}
+
+/* ================= BOX ================= */
 
 .box{
   background:var(--card);
   border:1px solid var(--border);
-  border-radius:14px;
+  border-radius:15px;
   padding:22px;
 }
 
 .box h3{
   color:var(--green);
-  margin-bottom:9px;
+  margin-bottom:8px;
 }
 
 .box p{
   color:#bbb;
 }
 
-/* PLATFORMS */
+/* ================= NOVELTIES ================= */
+
+.news-grid{
+  display:grid;
+  grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+  gap:12px;
+}
+
+.news{
+  background:#111;
+  border:1px solid var(--border);
+  border-radius:13px;
+  padding:20px;
+}
+
+.news strong{
+  display:block;
+  color:var(--green);
+  margin-bottom:6px;
+}
+
+.news span{
+  color:#999;
+  font-size:13px;
+}
+
+/* ================= PLATFORMS ================= */
 
 .platforms{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  grid-template-columns:
+    repeat(auto-fit,minmax(200px,1fr));
   gap:12px;
 }
 
@@ -460,18 +577,24 @@ section{
   font-size:13px;
 }
 
-/* COMMENTS */
+/* ================= COMMENTS ================= */
+
+.comment-highlight{
+  border:1px solid rgba(0,255,102,.25);
+  background:
+    linear-gradient(145deg,#101810,#090909);
+}
 
 .comment-form{
   display:grid;
   gap:10px;
-  margin-bottom:22px;
+  margin-bottom:25px;
 }
 
 .comment-form input,
 .comment-form textarea{
   width:100%;
-  background:#090909;
+  background:#080808;
   color:#fff;
   border:1px solid var(--border);
   border-radius:9px;
@@ -480,7 +603,7 @@ section{
 }
 
 .comment-form textarea{
-  min-height:100px;
+  min-height:110px;
   resize:vertical;
 }
 
@@ -489,16 +612,28 @@ section{
   border-color:var(--green);
 }
 
+.comment-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
 .comments{
   display:grid;
-  gap:10px;
+  gap:12px;
 }
 
 .comment{
-  background:#0d0d0d;
-  border:1px solid #222;
-  border-radius:10px;
+  background:#0b0b0b;
+  border:1px solid #242424;
+  border-radius:12px;
   padding:14px;
+}
+
+.comment-head{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
 }
 
 .comment strong{
@@ -507,36 +642,52 @@ section{
 
 .comment p{
   color:#bbb;
-  margin:5px 0;
+  margin:7px 0;
 }
 
 .comment small{
   color:#666;
 }
 
-/* STATUS */
-
-.status{
+.empty-comments{
   text-align:center;
-  padding:25px;
-  color:#888;
+  color:#666;
+  padding:20px;
 }
 
-.error{
-  color:#ff9999;
-  background:#190c0c;
-  border:1px solid #4b2020;
-  border-radius:10px;
-  padding:14px;
+/* ================= CONTACT ================= */
+
+.contact-card{
+  text-align:center;
+  background:
+    radial-gradient(circle at center,
+      rgba(0,255,102,.10),
+      transparent 60%),
+    #101010;
 }
 
-/* FOOTER */
+.contact-number{
+  color:var(--green);
+  font-size:30px;
+  font-weight:900;
+  margin:10px 0 18px;
+  letter-spacing:1px;
+}
+
+.contact-buttons{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+/* ================= FOOTER ================= */
 
 footer{
-  background:#050505;
+  background:#030303;
   border-top:1px solid var(--border);
   text-align:center;
-  padding:35px 16px;
+  padding:35px 15px;
 }
 
 footer p{
@@ -551,7 +702,23 @@ footer p{
   margin-top:14px;
 }
 
-/* MOBILE */
+/* ================= STATUS ================= */
+
+.status{
+  text-align:center;
+  color:#777;
+  padding:20px;
+}
+
+.error{
+  color:#ff9999;
+  background:#190c0c;
+  border:1px solid #4b2020;
+  border-radius:10px;
+  padding:14px;
+}
+
+/* ================= MOBILE ================= */
 
 @media(max-width:800px){
 
@@ -563,28 +730,16 @@ footer p{
     width:100%;
   }
 
-  nav a{
-    font-size:12px;
-    padding:7px 8px;
-  }
-
   .stats{
     grid-template-columns:repeat(2,1fr);
   }
 
-  .player-inner{
-    grid-template-columns:1fr;
-  }
-
-  .next-button{
-    width:100%;
-  }
 }
 
 @media(max-width:480px){
 
   .hero{
-    min-height:400px;
+    min-height:410px;
     padding:55px 14px;
   }
 
@@ -599,13 +754,20 @@ footer p{
   .actions{
     grid-template-columns:repeat(3,1fr);
   }
+
+  .contact-number{
+    font-size:25px;
+  }
+
 }
+
 </style>
 </head>
 
 <body id="top">
 
 <header>
+
   <div class="header">
 
     <a href="#top" class="logo">
@@ -618,13 +780,16 @@ footer p{
       <a href="#novidades">Novidades</a>
       <a href="#eventos">Eventos</a>
       <a href="#plataformas">Plataformas</a>
-      <a href="#sobre">Sobre</a>
+      <a href="#comentarios">Comentários</a>
       <a href="#contacto">Contacto</a>
     </nav>
 
   </div>
+
 </header>
 
+
+<!-- ================= HERO ================= -->
 
 <section id="inicio" class="hero">
 
@@ -641,17 +806,19 @@ footer p{
     <p>
       Site oficial do Grégo Music.
       Ouça músicas, descubra novidades,
-      acompanhe eventos e encontre as plataformas oficiais.
+      partilhe, comente e acompanhe os projetos.
     </p>
 
     <div class="hero-buttons">
+
       <a class="btn" href="#musicas">
         🎵 Ouvir músicas
       </a>
 
-      <a class="btn outline" href="#plataformas">
-        🌐 Plataformas
+      <a class="btn outline" href="#comentarios">
+        💬 Comentar
       </a>
+
     </div>
 
   </div>
@@ -659,22 +826,42 @@ footer p{
 </section>
 
 
+<!-- ================= PUBLICIDADE 1 ================= -->
+
+<div class="ad-area">
+
+  <div class="ad-label">
+    PUBLICIDADE
+  </div>
+
+</div>
+
+
+<!-- ================= MÚSICAS ================= -->
+
 <section id="musicas" class="container">
 
   <div class="title">
+
     <h2>🎵 Músicas</h2>
+
     <p>
-      As músicas MP3 do repositório são procuradas automaticamente.
+      As músicas MP3 são procuradas automaticamente no GitHub.
     </p>
+
   </div>
 
+
   <div class="search">
+
     <input
       id="search"
       type="search"
-      placeholder="Pesquisar música ou artista..."
+      placeholder="🔎 Pesquisar música ou artista..."
     >
+
   </div>
+
 
   <div class="stats">
 
@@ -700,50 +887,96 @@ footer p{
 
   </div>
 
+
   <div id="status" class="status">
-    A procurar músicas...
+    🔄 A procurar músicas...
   </div>
+
 
   <div id="musicGrid" class="music-grid"></div>
 
 </section>
 
 
+<!-- ================= PUBLICIDADE 2 ================= -->
+
+<div class="ad-area">
+
+  <div class="ad-label">
+    PUBLICIDADE
+  </div>
+
+</div>
+
+
+<!-- ================= NOVIDADES ================= -->
+
 <section id="novidades" class="container">
 
   <div class="title">
+
     <h2>🆕 Novidades</h2>
-    <p>Novos sons e projetos.</p>
-  </div>
-
-  <div class="box">
-
-    <h3>Novos sons</h3>
 
     <p>
-      Quando um novo ficheiro MP3 for colocado no repositório
-      oficial do GitHub, o site tenta encontrá-lo automaticamente.
+      Fica atento aos novos sons e projetos.
     </p>
+
+  </div>
+
+
+  <div class="news-grid">
+
+    <div class="news">
+      <strong>🎵 Novos sons</strong>
+      <span>
+        Os novos MP3 adicionados ao GitHub
+        podem aparecer automaticamente no site.
+      </span>
+    </div>
+
+    <div class="news">
+      <strong>🔥 Projetos</strong>
+      <span>
+        Acompanha os próximos projetos
+        do Grégo Music.
+      </span>
+    </div>
+
+    <div class="news">
+      <strong>📢 Divulgação</strong>
+      <span>
+        Partilha o site com os teus amigos
+        e outros ouvintes.
+      </span>
+    </div>
 
   </div>
 
 </section>
 
+
+<!-- ================= EVENTOS ================= -->
 
 <section id="eventos" class="container">
 
   <div class="title">
+
     <h2>📅 Eventos</h2>
-    <p>Agenda, apresentações e atividades.</p>
+
+    <p>
+      Agenda e apresentações.
+    </p>
+
   </div>
+
 
   <div class="box">
 
-    <h3>Eventos</h3>
+    <h3>Eventos do Grégo Music</h3>
 
     <p>
-      As informações sobre próximos eventos e apresentações
-      poderão ser publicadas nesta área.
+      Os próximos eventos e apresentações
+      poderão ser publicados nesta área.
     </p>
 
   </div>
@@ -751,12 +984,20 @@ footer p{
 </section>
 
 
+<!-- ================= PLATAFORMAS ================= -->
+
 <section id="plataformas" class="container">
 
   <div class="title">
+
     <h2>🌐 Plataformas</h2>
-    <p>Segue o Grégo Music nas plataformas oficiais.</p>
+
+    <p>
+      Encontra o Grégo Music nas plataformas oficiais.
+    </p>
+
   </div>
+
 
   <div class="platforms">
 
@@ -766,9 +1007,15 @@ footer p{
       target="_blank"
       rel="noopener noreferrer"
     >
+
       <strong>🎧 Audiomack</strong>
-      <span>Ouvir músicas</span>
+
+      <span>
+        Ouvir músicas
+      </span>
+
     </a>
+
 
     <a
       class="platform"
@@ -776,9 +1023,15 @@ footer p{
       target="_blank"
       rel="noopener noreferrer"
     >
+
       <strong>▶️ YouTube</strong>
-      <span>Vídeos e músicas</span>
+
+      <span>
+        Vídeos e músicas
+      </span>
+
     </a>
+
 
     <a
       class="platform"
@@ -786,9 +1039,15 @@ footer p{
       target="_blank"
       rel="noopener noreferrer"
     >
+
       <strong>🎵 TikTok</strong>
-      <span>Conteúdos</span>
+
+      <span>
+        Conteúdos
+      </span>
+
     </a>
+
 
     <a
       class="platform"
@@ -796,8 +1055,13 @@ footer p{
       target="_blank"
       rel="noopener noreferrer"
     >
+
       <strong>📘 Facebook</strong>
-      <span>Perfil</span>
+
+      <span>
+        Perfil
+      </span>
+
     </a>
 
   </div>
@@ -805,35 +1069,22 @@ footer p{
 </section>
 
 
-<section id="sobre" class="container">
+<!-- ================= COMENTÁRIOS ================= -->
+
+<section id="comentarios" class="container">
 
   <div class="title">
-    <h2>ℹ️ Sobre</h2>
-  </div>
 
-  <div class="box">
-
-    <h3>Grégo Music Oficial</h3>
+    <h2>💬 O que dizem os ouvintes</h2>
 
     <p>
-      Espaço oficial dedicado ao Grégo Music,
-      reunindo músicas, projetos, novidades,
-      eventos e plataformas.
+      Gostaste de uma música? Deixa o teu comentário.
     </p>
 
   </div>
 
-</section>
 
-
-<section id="contacto" class="container">
-
-  <div class="title">
-    <h2>💬 Comentários</h2>
-    <p>Partilha a tua opinião.</p>
-  </div>
-
-  <div class="box">
+  <div class="box comment-highlight">
 
     <form id="commentForm" class="comment-form">
 
@@ -841,22 +1092,40 @@ footer p{
         id="commentName"
         type="text"
         maxlength="60"
-        placeholder="Seu nome"
+        placeholder="👤 O teu nome"
         required
       >
+
 
       <textarea
         id="commentText"
         maxlength="500"
-        placeholder="Escreva o seu comentário..."
+        placeholder="💬 Escreve aqui o que achaste da música..."
         required
       ></textarea>
 
-      <button class="btn" type="submit">
-        Publicar comentário
-      </button>
+
+      <div class="comment-actions">
+
+        <button
+          class="btn"
+          type="submit"
+        >
+          🚀 Publicar comentário
+        </button>
+
+        <button
+          class="action"
+          type="button"
+          id="clearComment"
+        >
+          Limpar
+        </button>
+
+      </div>
 
     </form>
+
 
     <div id="comments" class="comments"></div>
 
@@ -865,17 +1134,112 @@ footer p{
 </section>
 
 
+<!-- ================= PUBLICIDADE 3 ================= -->
+
+<div class="ad-area">
+
+  <div class="ad-label">
+    PUBLICIDADE
+  </div>
+
+</div>
+
+
+<!-- ================= SOBRE ================= -->
+
+<section id="sobre" class="container">
+
+  <div class="title">
+
+    <h2>ℹ️ Sobre</h2>
+
+  </div>
+
+
+  <div class="box">
+
+    <h3>
+      Grégo Music Oficial
+    </h3>
+
+    <p>
+      Espaço oficial dedicado ao Grégo Music,
+      reunindo músicas, projetos, novidades,
+      eventos, plataformas e conteúdos.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- ================= CONTACTO ================= -->
+
+<section id="contacto" class="container">
+
+  <div class="title">
+
+    <h2>📞 Contacto</h2>
+
+    <p>
+      Divulgação, eventos, parcerias e publicidade.
+    </p>
+
+  </div>
+
+
+  <div class="box contact-card">
+
+    <h3>
+      Fala diretamente com o Grégo Music
+    </h3>
+
+    <div class="contact-number">
+      949 623 013
+    </div>
+
+
+    <div class="contact-buttons">
+
+      <a
+        class="btn"
+        href="tel:+244949623013"
+      >
+        📞 Ligar
+      </a>
+
+
+      <a
+        class="btn outline"
+        href="https://wa.me/244949623013"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        💬 WhatsApp
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= PRIVACIDADE ================= -->
+
 <section class="container">
 
   <div class="box">
 
-    <h3>🔒 Privacidade</h3>
+    <h3>
+      🔒 Privacidade
+    </h3>
 
     <p>
-      O site pode utilizar armazenamento local para guardar
-      favoritos, comentários e estatísticas locais.
-      O Google AdSense e outros serviços externos podem
-      utilizar os seus próprios mecanismos de dados e cookies
+      O site pode utilizar armazenamento local para
+      favoritos, comentários e estatísticas.
+      O Google AdSense e outros serviços externos
+      podem utilizar cookies e tecnologias semelhantes
       de acordo com as respetivas políticas.
     </p>
 
@@ -884,16 +1248,25 @@ footer p{
 </section>
 
 
+<!-- ================= FOOTER ================= -->
+
 <footer>
 
   <p>
-    © <span id="year"></span> Grégo Music Oficial.
+    © <span id="year"></span>
+    Grégo Music Oficial.
     Todos os direitos reservados.
   </p>
 
   <p>
-    Conteúdo musical pertencente aos respetivos autores e titulares.
+    Conteúdo musical pertencente aos respetivos
+    autores e titulares.
   </p>
+
+  <p>
+    Contacto: 949 623 013
+  </p>
+
 
   <a class="top" href="#top">
     ↑ Voltar ao topo
@@ -902,371 +1275,38 @@ footer p{
 </footer>
 
 
-<!-- PLAYER ÚNICO -->
+<!-- ================= PLAYER PERSONALIZADO ================= -->
 
 <div id="player" class="player">
 
   <div class="player-inner">
 
-    <div class="now-playing">
+    <div class="player-top">
 
-      <small>A tocar agora</small>
+      <div class="now-playing">
 
-      <strong id="nowPlaying">
-        Nenhuma música
-      </strong>
+        <small>
+          🎵 A tocar agora
+        </small>
+
+        <strong id="nowPlaying">
+          Nenhuma música
+        </strong>
+
+      </div>
+
+
+      <button
+        id="closePlayer"
+        class="close-player"
+        type="button"
+      >
+        ✕
+      </button>
 
     </div>
 
-    <audio
-      id="audio"
-      controls
-      preload="metadata"
-    ></audio>
 
-    <button
-      id="next"
-      class="next-button"
-      type="button"
-    >
-      ⏭ Próxima
-    </button>
-
-  </div>
-
-</div>
-
-
-<script>
-
-/* =========================================================
-   CONFIGURAÇÃO
-   ========================================================= */
-
-const GITHUB_API =
-  "https://api.github.com/repos/gregomusic/Grego-music/contents/";
-
-const GITHUB_RAW =
-  "https://raw.githubusercontent.com/gregomusic/Grego-music/main/";
-
-
-/*
-   SUPABASE
-
-   Deixar vazio NÃO impede o site de funcionar.
-
-   Quando tivermos a URL e a chave pública ANON do novo
-   projeto Supabase, colocamos aqui.
-
-   Nunca colocar service_role key neste HTML.
-*/
-
-const SUPABASE_URL = "";
-const SUPABASE_ANON_KEY = "";
-
-
-/* =========================================================
-   MÚSICAS DE RESERVA — NOMES REAIS DO REPOSITÓRIO
-   ========================================================= */
-
-const FALLBACK = [
-
-  {
-    title:"Anthony Ndulo ft Grego Yakuza Flechas",
-    file:"Anthony Ndulo ft Grego Yakuza Flechas .mp3"
-  },
-
-  {
-    title:"Choros",
-    file:"Choros .mp3"
-  },
-
-  {
-    title:"Djhon outro lado",
-    file:"Djhon_outro_lado_(prodby_ND-Studio).mp3"
-  },
-
-  {
-    title:"Grego M",
-    file:"Grego_M_.mp3"
-  },
-
-  {
-    title:"Grego Moreno distânte",
-    file:"Grego_Moreno_distânte.mp3"
-  },
-
-  {
-    title:"Meu negro",
-    file:"Meu negro.mp3"
-  },
-
-  {
-    title:"New Version feat Clã Yakuza mudança",
-    file:"New_Version_feat_Clã_Yakuza_mudança_(Prodby_ND_Studio).mp3"
-  },
-
-  {
-    title:"New Version planos",
-    file:"New_Version_planos_(Prodby_ND-Studio).mp3"
-  }
-
-];
-
-
-/* =========================================================
-   ESTADO
-   ========================================================= */
-
-let songs = [];
-
-let current = -1;
-
-let stats =
-  JSON.parse(
-    localStorage.getItem("grego_stats") || "{}"
-  );
-
-let favorites =
-  JSON.parse(
-    localStorage.getItem("grego_favorites") || "[]"
-  );
-
-let comments =
-  JSON.parse(
-    localStorage.getItem("grego_comments") || "[]"
-  );
-
-
-/* =========================================================
-   ELEMENTOS
-   ========================================================= */
-
-const grid =
-  document.getElementById("musicGrid");
-
-const status =
-  document.getElementById("status");
-
-const search =
-  document.getElementById("search");
-
-const audio =
-  document.getElementById("audio");
-
-const player =
-  document.getElementById("player");
-
-const nowPlaying =
-  document.getElementById("nowPlaying");
-
-
-/* =========================================================
-   FUNÇÕES GERAIS
-   ========================================================= */
-
-function save(){
-
-  localStorage.setItem(
-    "grego_stats",
-    JSON.stringify(stats)
-  );
-
-  localStorage.setItem(
-    "grego_favorites",
-    JSON.stringify(favorites)
-  );
-
-  localStorage.setItem(
-    "grego_comments",
-    JSON.stringify(comments)
-  );
-
-}
-
-
-function idOf(song){
-
-  return song.file
-    .toLowerCase()
-    .trim();
-
-}
-
-
-function songStats(song){
-
-  const id = idOf(song);
-
-  if(!stats[id]){
-
-    stats[id] = {
-      plays:0,
-      downloads:0,
-      likes:0,
-      shares:0
-    };
-
-  }
-
-  return stats[id];
-
-}
-
-
-function rawUrl(file){
-
-  /*
-    encodeURIComponent apenas no nome do ficheiro.
-    Isso preserva espaços, acentos e caracteres especiais.
-  */
-
-  return GITHUB_RAW +
-    encodeURIComponent(file);
-
-}
-
-
-function escapeHTML(text){
-
-  return String(text)
-    .replace(/&/g,"&amp;")
-    .replace(/</g,"&lt;")
-    .replace(/>/g,"&gt;")
-    .replace(/"/g,"&quot;")
-    .replace(/'/g,"&#039;");
-
-}
-
-
-/* =========================================================
-   DESCOBERTA AUTOMÁTICA
-   ========================================================= */
-
-async function loadSongs(){
-
-  let found = [];
-
-  try{
-
-    const response =
-      await fetch(
-        GITHUB_API,
-        {
-          cache:"no-store",
-          headers:{
-            "Accept":
-              "application/vnd.github+json"
-          }
-        }
-      );
-
-    if(!response.ok){
-      throw new Error(
-        "GitHub API " +
-        response.status
-      );
-    }
-
-    const files =
-      await response.json();
-
-    if(Array.isArray(files)){
-
-      found =
-        files
-        .filter(
-          item =>
-            item.type === "file" &&
-            item.name
-              .toLowerCase()
-              .endsWith(".mp3")
-        )
-        .map(item => ({
-
-          title:
-            item.name
-              .replace(/\.mp3$/i,"")
-              .replace(/_/g," "),
-
-          file:item.name,
-
-          /*
-             download_url fornecido pelo GitHub
-             é preferível ao URL construído manualmente.
-          */
-
-          url:
-            item.download_url ||
-            rawUrl(item.name)
-
-        }));
-
-    }
-
-  }catch(error){
-
-    console.log(
-      "GitHub automático indisponível:",
-      error
-    );
-
-  }
-
-
-  /*
-    Primeiro colocamos os ficheiros conhecidos.
-    Depois adicionamos os novos encontrados.
-    Assim, se a API falhar, as músicas continuam.
-  */
-
-  const map = new Map();
-
-
-  FALLBACK.forEach(song => {
-
-    map.set(
-      idOf(song),
-      {
-        ...song,
-        url:rawUrl(song.file)
-      }
-    );
-
-  });
-
-
-  found.forEach(song => {
-
-    map.set(
-      idOf(song),
-      song
-    );
-
-  });
-
-
-  songs =
-    Array.from(map.values());
-
-
-  status.textContent =
-    songs.length +
-    " música(s) disponível(is).";
-
-
-  render();
-
-}
-
-
-/* =========================================================
-   RENDER
-   ========================================================= */
-
-function render(){
-
-  const query =
-    search.value
-      .toLowerCase()
-    
+    <input
+      id="progress"
+      cla
