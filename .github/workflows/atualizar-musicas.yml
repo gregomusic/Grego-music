@@ -1,0 +1,332 @@
+name: Atualizar músicas automaticamente
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+
+  atualizar:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Criar sistema automático
+        shell: python
+        run: |
+
+          import os
+          import json
+          import re
+          import unicodedata
+          from datetime import date
+
+          BASE = "https://gregomusic.github.io/Grego-music/"
+          RAW = "https://github.com/gregomusic/Grego-music/raw/refs/heads/main/"
+
+          def slugify(text):
+
+              text = unicodedata.normalize(
+                  "NFD",
+                  text
+              )
+
+              text = "".join(
+                  c for c in text
+                  if unicodedata.category(c) != "Mn"
+              )
+
+              text = text.lower()
+
+              text = re.sub(
+                  r"[^a-z0-9]+",
+                  "-",
+                  text
+              )
+
+              return text.strip("-")
+
+          def title_from_filename(filename):
+
+              name = os.path.splitext(filename)[0]
+
+              name = name.replace("_", " ")
+              name = name.replace("-", " ")
+
+              name = re.sub(
+                  r"\(.*?\)",
+                  "",
+                  name
+              )
+
+              name = re.sub(
+                  r"\s+",
+                  " ",
+                  name
+              )
+
+              return name.strip()
+
+          songs = []
+
+          for root, dirs, files in os.walk("."):
+
+              dirs[:] = [
+                  d for d in dirs
+                  if d not in [
+                      ".git",
+                      ".github",
+                      "songs"
+                  ]
+              ]
+
+              for filename in files:
+
+                  if not filename.lower().endswith(".mp3"):
+                      continue
+
+                  fullpath = os.path.join(
+                      root,
+                      filename
+                  )
+
+                  relative = os.path.relpath(
+                      fullpath,
+                      "."
+                  ).replace("\\","/")
+
+                  title = title_from_filename(
+                      filename
+                  )
+
+                  slug = slugify(title)
+
+                  if not slug:
+                      slug = "musica"
+
+                  page = BASE + "songs/" + slug + ".html"
+
+                  url = RAW + "/".join(
+                      [
+                          x.replace(" ", "%20")
+                          for x in relative.split("/")
+                      ]
+                  )
+
+                  songs.append({
+                      "title": title,
+                      "artist": "Grégo Music",
+                      "filename": filename,
+                      "slug": slug,
+                      "url": url,
+                      "page": page
+                  })
+
+          songs.sort(
+              key=lambda x: x["title"].lower()
+          )
+
+          os.makedirs(
+              "songs",
+              exist_ok=True
+          )
+
+          with open(
+              "songs.json",
+              "w",
+              encoding="utf-8"
+          ) as f:
+
+              json.dump(
+                  songs,
+                  f,
+                  ensure_ascii=False,
+                  indent=2
+              )
+
+          template_css = """
+
+          body{
+            background:#08090d;
+            color:white;
+            font-family:Arial,sans-serif;
+            margin:0;
+          }
+
+          main{
+            max-width:800px;
+            margin:auto;
+            padding:30px 15px;
+          }
+
+          h1{
+            color:#25d366;
+          }
+
+          .box{
+            background:#111318;
+            border:1px solid #292d33;
+            border-radius:14px;
+            padding:25px;
+          }
+
+          audio{
+            width:100%;
+            margin:20px 0;
+          }
+
+          a{
+            color:#25d366;
+          }
+
+          """
+
+          for song in songs:
+
+              safe_title = (
+                  song["title"]
+                  .replace("&","&amp;")
+                  .replace("<","&lt;")
+                  .replace(">","&gt;")
+                  .replace('"',"&quot;")
+              )
+
+              jsonld = {
+                  "@context":"https://schema.org",
+                  "@type":"MusicRecording",
+                  "name":song["title"],
+                  "url":song["page"],
+                  "byArtist":{
+                      "@type":"MusicGroup",
+                      "name":"Grégo Music"
+                  }
+              }
+
+              html = f"""<!DOCTYPE html>
+          <html lang="pt-AO">
+          <head>
+
+          <meta charset="UTF-8">
+
+          <meta name="viewport"
+          content="width=device-width,initial-scale=1">
+
+          <title>{safe_title} — Grégo Music Oficial</title>
+
+          <meta name="description"
+          content="Ouça {safe_title} no Grégo Music Oficial.">
+
+          <link rel="canonical"
+          href="{song["page"]}">
+
+          <script type="application/ld+json">
+          {json.dumps(jsonld,ensure_ascii=False,indent=2)}
+          </script>
+
+          <style>
+          {template_css}
+          </style>
+
+          </head>
+
+          <body>
+
+          <main>
+
+          <p>
+          <a href="{BASE}">
+          ← Voltar para Grégo Music Oficial
+          </a>
+          </p>
+
+          <div class="box">
+
+          <h1>{safe_title}</h1>
+
+          <p>
+          Artista: Grégo Music
+          </p>
+
+          <audio
+          controls
+          preload="metadata"
+          src="{song["url"]}">
+          </audio>
+
+          <p>
+          <a href="{song["url"]}" target="_blank">
+          ⬇️ Baixar / abrir música
+          </a>
+          </p>
+
+          </div>
+
+          </main>
+
+          </body>
+          </html>
+          """
+
+              with open(
+                  "songs/" + song["slug"] + ".html",
+                  "w",
+                  encoding="utf-8"
+              ) as f:
+
+                  f.write(html)
+
+          urls = []
+
+          urls.append(BASE)
+
+          for song in songs:
+              urls.append(song["page"])
+
+          sitemap = """<?xml version="1.0" encoding="UTF-8"?>
+          <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+          """
+
+          for url in urls:
+
+              sitemap += f"""
+          <url>
+            <loc>{url}</loc>
+            <lastmod>{date.today().isoformat()}</lastmod>
+          </url>
+          """
+
+          sitemap += """
+          </urlset>
+          """
+
+          with open(
+              "sitemap.xml",
+              "w",
+              encoding="utf-8"
+          ) as f:
+
+              f.write(sitemap)
+
+      - name: Guardar alterações
+        run: |
+
+          git config user.name "github-actions[bot]"
+
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add songs.json songs sitemap.xml
+
+          git diff --cached --quiet || git commit -m "Atualizar músicas automaticamente"
+
+          git push
