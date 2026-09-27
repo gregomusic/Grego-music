@@ -315,7 +315,7 @@ audio{
 }
 
 /* =========================
-   GALERIA DE FOTOS
+   FOTOS
 ========================= */
 
 .photo-grid{
@@ -334,18 +334,13 @@ audio{
 .photo-card img{
   width:100%;
   height:210px;
-  display:block;
   object-fit:cover;
+  display:block;
   cursor:pointer;
-  transition:transform .25s ease;
-}
-
-.photo-card img:hover{
-  transform:scale(1.03);
 }
 
 .photo-name{
-  padding:9px 10px;
+  padding:9px;
   color:#aaa;
   font-size:12px;
   word-break:break-word;
@@ -374,16 +369,12 @@ audio{
   border-radius:10px;
 }
 
-/* =========================
-   VISUALIZADOR DA FOTO
-========================= */
-
 .photo-viewer{
   display:none;
   position:fixed;
-  z-index:9999;
   inset:0;
-  background:rgba(0,0,0,.94);
+  z-index:9999;
+  background:rgba(0,0,0,.95);
   align-items:center;
   justify-content:center;
   padding:20px;
@@ -400,10 +391,9 @@ audio{
   position:absolute;
   top:15px;
   right:20px;
-  font-size:35px;
+  font-size:38px;
   color:#fff;
   cursor:pointer;
-  line-height:1;
 }
 
 footer{
@@ -467,7 +457,6 @@ footer{
 <header>
 
   <div class="logo">GRÉGO MUSIC</div>
-
   <div class="subtitle">Site Oficial</div>
 
   <nav>
@@ -511,7 +500,7 @@ footer{
 
 </section>
 
-<!-- ANÚNCIO ADSENSE -->
+<!-- ADSENSE -->
 
 <div class="adbox">
 
@@ -566,7 +555,7 @@ footer{
 
 </section>
 
-<!-- ANÚNCIO ADSENSE -->
+<!-- SEGUNDO ANÚNCIO -->
 
 <div class="adbox">
 
@@ -585,9 +574,7 @@ footer{
 
 </div>
 
-<!-- =========================
-     FOTOS
-========================= -->
+<!-- FOTOS -->
 
 <section id="fotos" class="container section">
 
@@ -597,9 +584,8 @@ footer{
     As fotos são carregadas automaticamente do repositório oficial do GitHub.
   </p>
 
-  <div
-    id="photoStatus"
-    style="color:#aaa;text-align:center;margin-bottom:15px;">
+  <div id="photoStatus"
+       style="color:#aaa;text-align:center;margin-bottom:15px;">
     A procurar fotos no GitHub...
   </div>
 
@@ -635,7 +621,7 @@ footer{
     <br>
 
     <p>
-      As novas fotos adicionadas ao GitHub também podem aparecer
+      Novas fotos adicionadas ao GitHub também podem aparecer
       automaticamente na galeria.
     </p>
 
@@ -739,21 +725,18 @@ footer{
 
 <!-- VISUALIZADOR DE FOTOS -->
 
-<div
-  id="photoViewer"
-  class="photo-viewer"
-  onclick="closePhoto(event)">
+<div id="photoViewer"
+     class="photo-viewer"
+     onclick="closePhoto(event)">
 
-  <div
-    class="photo-close"
-    onclick="closePhoto(event)">
+  <div class="photo-close"
+       onclick="closePhoto(event)">
     ×
   </div>
 
-  <img
-    id="photoViewerImage"
-    src=""
-    alt="Foto Grégo Music">
+  <img id="photoViewerImage"
+       src=""
+       alt="Foto Grégo Music">
 
 </div>
 
@@ -785,15 +768,11 @@ const COMMENTS_KEY = "grego_music_comments_v3";
 function getStorage(key){
 
   try{
-
     return JSON.parse(
       localStorage.getItem(key) || "{}"
     );
-
   }catch(e){
-
     return {};
-
   }
 
 }
@@ -848,7 +827,7 @@ function escapeHTML(text){
 
 
 /* =========================================================
-   ID ÚNICO DA MÚSICA
+   ID DA MÚSICA
 ========================================================= */
 
 function musicId(path){
@@ -862,7 +841,7 @@ function musicId(path){
 
 
 /* =========================================================
-   CARREGAR MÚSICAS DO GITHUB
+   CARREGAR MÚSICAS
 ========================================================= */
 
 async function loadMusic(forceRefresh=false){
@@ -881,17 +860,19 @@ async function loadMusic(forceRefresh=false){
 
   try{
 
-    const url = forceRefresh
+    const url =
+      forceRefresh
       ? GITHUB_TREE_API + "&t=" + Date.now()
       : GITHUB_TREE_API;
 
-    const response = await fetch(url,{
-      method:"GET",
-      cache:"no-store",
-      headers:{
-        "Accept":"application/vnd.github+json"
-      }
-    });
+    const response =
+      await fetch(url,{
+        method:"GET",
+        cache:"no-store",
+        headers:{
+          "Accept":"application/vnd.github+json"
+        }
+      });
 
     if(!response.ok){
 
@@ -915,14 +896,11 @@ async function loadMusic(forceRefresh=false){
 
     const mp3s =
       data.tree
-
       .filter(item =>
         item.type === "blob" &&
         /\.mp3$/i.test(item.path)
       )
-
       .map(item => item.path)
-
       .sort((a,b) =>
         a.localeCompare(b,"pt-BR")
       );
@@ -939,11 +917,9 @@ async function loadMusic(forceRefresh=false){
         "Nenhum MP3 encontrado.";
 
       return;
-
     }
 
-    window.gregoMusicFiles =
-      mp3s;
+    window.gregoMusicFiles = mp3s;
 
     renderMusic(mp3s);
 
@@ -1001,7 +977,6 @@ function renderMusic(files){
     `;
 
     return;
-
   }
 
   list.innerHTML =
@@ -1015,10 +990,10 @@ function renderMusic(files){
 
       const encodedPath =
         path.split("/")
-          .map(part =>
-            encodeURIComponent(part)
-          )
-          .join("/");
+        .map(part =>
+          encodeURIComponent(part)
+        )
+        .join("/");
 
       const audioURL =
         RAW_BASE + encodedPath;
@@ -1051,8 +1026,7 @@ function renderMusic(files){
 
           <div class="music-actions">
 
-            <button
-              onclick="likeMusic('${id}')">
+            <button onclick="likeMusic('${id}')">
               ❤️ Curtir
             </button>
 
@@ -1065,8 +1039,7 @@ function renderMusic(files){
               ⬇️ Baixar
             </a>
 
-            <button
-              onclick="shareMusic('${title}','${audioURL}')">
+            <button onclick="shareMusic('${title}','${audioURL}')">
               📤 Partilhar
             </button>
 
@@ -1086,17 +1059,13 @@ function renderMusic(files){
 
           <div class="comments">
 
-            <strong>
-              💬 Comentários
-            </strong>
+            <strong>💬 Comentários</strong>
 
             <textarea
               id="comment-input-${id}"
-              placeholder="Escreva um comentário...">
-            </textarea>
+              placeholder="Escreva um comentário..."></textarea>
 
-            <button
-              onclick="addComment('${id}')">
+            <button onclick="addComment('${id}')">
               Publicar comentário
             </button>
 
@@ -1180,7 +1149,7 @@ function likeMusic(id){
 
 
 /* =========================================================
-   ATUALIZAR CONTADORES
+   CONTADORES
 ========================================================= */
 
 function updateCounters(id){
@@ -1204,4 +1173,28 @@ function updateCounters(id){
   if(likeElement){
 
     likeElement.textContent =
-      l
+      likes[id] || 0;
+
+  }
+
+  if(downloadElement){
+
+    downloadElement.textContent =
+      downloads[id] || 0;
+
+  }
+
+}
+
+
+/* =========================================================
+   DOWNLOADS
+========================================================= */
+
+function downloadMusic(id){
+
+  const downloads =
+    getStorage(DOWNLOADS_KEY);
+
+  downloads[id] =
+    Number(downloads[id]
