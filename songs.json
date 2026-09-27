@@ -62,5 +62,13 @@
     "slug": "new-version-planos",
     "url": "https://github.com/gregomusic/Grego-music/raw/refs/heads/main/New_Version_planos_(Prodby_ND-Studio).mp3",
     "page": "https://gregomusic.github.io/Grego-music/songs/new-version-planos.html"
+  },
+  {
+    "title": "Scolha",
+    "artist": "Grégo Music",
+    "filename": "Scolha.mp3",
+    "slug": "scolha",
+    "url": "https://github.com/gregomusic/Grego-music/raw/refs/heads/main/Scolha.mp3",
+    "page": "https://gregomusic.github.io/Grego-music/songs/scolha.html"
   }
 ]
