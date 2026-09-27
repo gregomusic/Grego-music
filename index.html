@@ -2,19 +2,20 @@
 <html lang="pt">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Grégo Music Oficial — Site Oficial</title>
 
-<meta name="description" content="Grégo Music Oficial — músicas, novidades, eventos, plataformas, comentários e conteúdos oficiais.">
-<meta name="keywords" content="Grego Music, Grégo Music Oficial, Grego Yakuza, Clã Yakuza, música angolana">
+<meta name="description" content="Grégo Music Oficial — músicas, novidades, eventos, plataformas e conteúdos oficiais.">
+<meta name="keywords" content="Grego Music, Grégo Music Oficial, Grego Yakuza, música angolana, Clã Yakuza">
 <meta name="author" content="Grégo Music Oficial">
-<meta name="robots" content="index,follow">
+<meta name="robots" content="index, follow">
 
 <link rel="canonical" href="https://gregomusic.github.io/Grego-music/">
 
 <meta property="og:title" content="Grégo Music Oficial">
-<meta property="og:description" content="Ouça músicas, comente, partilhe e acompanhe as novidades do Grégo Music.">
+<meta property="og:description" content="Ouça as músicas do Grégo Music, acompanhe novidades e partilhe os sons.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://gregomusic.github.io/Grego-music/">
 
@@ -26,738 +27,594 @@ crossorigin="anonymous"></script>
 <style>
 
 :root{
-  --bg:#050505;
-  --bg2:#0b0b0b;
-  --card:#111;
-  --card2:#171717;
-  --green:#00ff66;
-  --green2:#00c853;
-  --white:#fff;
-  --muted:#999;
-  --border:#292929;
-  --red:#ff4545;
-  --gold:#ffd740;
+--bg:#080808;
+--card:#111;
+--card2:#181818;
+--green:#00ff66;
+--green2:#00c853;
+--white:#fff;
+--gray:#aaa;
+--border:#292929;
+--red:#ff4545;
 }
 
 *{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+box-sizing:border-box;
+margin:0;
+padding:0;
 }
 
 html{
-  scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
 
 body{
-  background:
-    radial-gradient(circle at top,rgba(0,255,102,.045),transparent 30%),
-    var(--bg);
-  color:var(--white);
-  font-family:Arial,Helvetica,sans-serif;
-  line-height:1.5;
-  padding-bottom:95px;
+background:var(--bg);
+color:var(--white);
+font-family:Arial,Helvetica,sans-serif;
+line-height:1.5;
+padding-bottom:90px;
 }
 
 a{
-  color:inherit;
-  text-decoration:none;
+color:inherit;
+text-decoration:none;
 }
 
 button,
 input,
 textarea{
-  font:inherit;
+font:inherit;
 }
 
 button{
-  cursor:pointer;
+cursor:pointer;
 }
-
-img{
-  max-width:100%;
-}
-
-/* ================= HEADER ================= */
 
 header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:rgba(0,0,0,.96);
-  border-bottom:1px solid var(--border);
-  backdrop-filter:blur(12px);
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(0,0,0,.96);
+border-bottom:1px solid var(--border);
+backdrop-filter:blur(10px);
 }
 
-.header{
-  max-width:1200px;
-  margin:auto;
-  padding:12px 15px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:12px;
+.header-inner{
+max-width:1200px;
+margin:auto;
+padding:13px 15px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:15px;
 }
 
-.logo{
-  color:var(--green);
-  font-weight:900;
-  font-size:18px;
-  white-space:nowrap;
+.brand{
+font-size:19px;
+font-weight:900;
+color:var(--green);
+white-space:nowrap;
 }
 
 nav{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:4px;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:5px;
 }
 
 nav a{
-  color:#ddd;
-  padding:7px 9px;
-  border-radius:8px;
-  font-size:12px;
+font-size:12px;
+padding:8px 9px;
+border-radius:8px;
+color:#ddd;
 }
 
 nav a:hover{
-  background:var(--green);
-  color:#000;
+background:var(--green);
+color:#000;
 }
-
-/* ================= HERO ================= */
 
 .hero{
-  min-height:470px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:70px 16px;
-  background:
-    radial-gradient(circle at center,
-      rgba(0,255,102,.17),
-      transparent 45%),
-    linear-gradient(#111,#050505);
+min-height:430px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:60px 18px;
+background:
+radial-gradient(circle at center,rgba(0,255,102,.12),transparent 48%),
+linear-gradient(180deg,#101010,#080808);
 }
 
-.hero-inner{
-  max-width:850px;
+.hero-content{
+max-width:850px;
 }
 
-.logo-mark{
-  width:125px;
-  height:125px;
-  border:3px solid var(--green);
-  border-radius:50%;
-  margin:0 auto 22px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:var(--green);
-  font-size:36px;
-  font-weight:900;
-  box-shadow:
-    0 0 25px rgba(0,255,102,.16),
-    inset 0 0 25px rgba(0,255,102,.08);
+.logo{
+width:115px;
+height:115px;
+border:3px solid var(--green);
+border-radius:50%;
+margin:0 auto 20px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:32px;
+font-weight:900;
+color:var(--green);
+box-shadow:0 0 30px rgba(0,255,102,.18);
 }
 
-.hero h1{
-  font-size:clamp(38px,9vw,70px);
-  line-height:1;
-  margin-bottom:16px;
+h1{
+font-size:clamp(34px,8vw,65px);
+line-height:1;
+margin-bottom:15px;
 }
 
 .green{
-  color:var(--green);
+color:var(--green);
 }
 
 .hero p{
-  color:#ccc;
-  max-width:720px;
-  margin:auto;
+color:#ccc;
+max-width:700px;
+margin:auto;
 }
 
 .hero-buttons{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:10px;
-  margin-top:28px;
+margin-top:25px;
+display:flex;
+justify-content:center;
+gap:10px;
+flex-wrap:wrap;
 }
 
 .btn{
-  display:inline-block;
-  border:1px solid var(--green);
-  background:var(--green);
-  color:#000;
-  padding:12px 18px;
-  border-radius:10px;
-  font-weight:800;
+display:inline-block;
+border:1px solid var(--green);
+background:var(--green);
+color:#000;
+padding:12px 18px;
+border-radius:10px;
+font-weight:bold;
 }
 
-.btn.outline{
-  background:transparent;
-  color:var(--green);
+.btn.secondary{
+background:transparent;
+color:var(--green);
 }
-
-.btn:hover{
-  transform:translateY(-1px);
-}
-
-/* ================= CONTAINER ================= */
 
 .container{
-  max-width:1200px;
-  margin:auto;
-  padding:45px 15px;
+max-width:1200px;
+margin:auto;
+padding:45px 15px;
 }
 
 section{
-  scroll-margin-top:80px;
+scroll-margin-top:80px;
 }
 
-.title{
-  text-align:center;
-  margin-bottom:25px;
+.section-title{
+text-align:center;
+margin-bottom:25px;
 }
 
-.title h2{
-  color:var(--green);
-  font-size:30px;
-  margin-bottom:5px;
+.section-title h2{
+color:var(--green);
+font-size:30px;
+margin-bottom:6px;
 }
 
-.title p{
-  color:var(--muted);
+.section-title p{
+color:var(--gray);
 }
-
-/* ================= PUBLICIDADE ================= */
-
-.ad-area{
-  max-width:1100px;
-  min-height:90px;
-  margin:20px auto;
-  border:1px dashed #333;
-  border-radius:12px;
-  background:#090909;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  overflow:hidden;
-}
-
-.ad-label{
-  color:#555;
-  font-size:11px;
-  letter-spacing:1px;
-}
-
-/*
- O Google AdSense Auto Ads pode utilizar estas áreas.
- Não foi inventado nenhum data-ad-slot.
-*/
-
-/* ================= SEARCH ================= */
 
 .search{
-  max-width:720px;
-  margin:0 auto 25px;
+max-width:700px;
+margin:0 auto 25px;
 }
 
 .search input{
-  width:100%;
-  background:#101010;
-  color:#fff;
-  border:1px solid var(--border);
-  border-radius:11px;
-  padding:14px;
-  outline:none;
+width:100%;
+padding:14px;
+background:#111;
+border:1px solid var(--border);
+border-radius:10px;
+color:#fff;
+outline:none;
 }
 
 .search input:focus{
-  border-color:var(--green);
+border-color:var(--green);
 }
 
-/* ================= STATS ================= */
-
 .stats{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:10px;
-  margin-bottom:28px;
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:10px;
+margin-bottom:25px;
 }
 
 .stat{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:12px;
-  padding:15px 8px;
-  text-align:center;
+background:var(--card);
+border:1px solid var(--border);
+border-radius:12px;
+padding:15px 8px;
+text-align:center;
 }
 
 .stat strong{
-  display:block;
-  color:var(--green);
-  font-size:25px;
+display:block;
+font-size:23px;
+color:var(--green);
 }
 
 .stat span{
-  color:#888;
-  font-size:11px;
+font-size:11px;
+color:#aaa;
 }
 
-/* ================= MUSIC ================= */
-
 .music-grid{
-  display:grid;
-  grid-template-columns:
-    repeat(auto-fit,minmax(280px,1fr));
-  gap:17px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:18px;
 }
 
 .music-card{
-  background:
-    linear-gradient(145deg,#171717,#0b0b0b);
-  border:1px solid var(--border);
-  border-radius:16px;
-  padding:16px;
-  transition:.2s;
+background:linear-gradient(145deg,#151515,#0c0c0c);
+border:1px solid var(--border);
+border-radius:16px;
+padding:17px;
+transition:.2s;
 }
 
 .music-card:hover{
-  border-color:var(--green2);
-  transform:translateY(-2px);
+border-color:#00b94d;
+transform:translateY(-2px);
 }
 
 .cover{
-  height:145px;
-  border-radius:13px;
-  margin-bottom:14px;
-  background:
-    radial-gradient(circle,
-      rgba(0,255,102,.22),
-      transparent 58%),
-    #080808;
-  border:1px solid #252525;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:var(--green);
-  font-size:44px;
+height:150px;
+border-radius:13px;
+border:1px solid #222;
+background:
+radial-gradient(circle,#00ff6630,transparent 60%),
+#090909;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:45px;
+color:var(--green);
+margin-bottom:15px;
 }
 
 .music-card h3{
-  font-size:18px;
-  margin-bottom:3px;
+font-size:18px;
+margin-bottom:4px;
 }
 
 .artist{
-  color:#888;
-  font-size:13px;
-  margin-bottom:12px;
+font-size:13px;
+color:#999;
+margin-bottom:15px;
 }
 
-.play-button{
-  width:100%;
-  border:1px solid var(--green);
-  background:var(--green);
-  color:#000;
-  padding:12px;
-  border-radius:9px;
-  font-weight:900;
-  margin-bottom:9px;
+.main-play{
+width:100%;
+padding:12px;
+border:0;
+border-radius:9px;
+background:var(--green);
+color:#000;
+font-weight:bold;
+margin-bottom:10px;
 }
 
-.play-button.playing{
-  background:#111;
-  color:var(--green);
-}
-
-.actions{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:7px;
+.action-row{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:6px;
 }
 
 .action{
-  background:#181818;
-  border:1px solid #2b2b2b;
-  color:#ddd;
-  border-radius:8px;
-  padding:9px 3px;
-  font-size:11px;
+background:#191919;
+color:#ddd;
+border:1px solid #2a2a2a;
+border-radius:8px;
+padding:9px 3px;
+font-size:11px;
 }
 
 .action:hover,
 .action.active{
-  color:var(--green);
-  border-color:var(--green);
+color:var(--green);
+border-color:var(--green);
 }
 
-.meta{
-  display:flex;
-  justify-content:space-between;
-  color:#666;
-  font-size:11px;
-  margin-top:10px;
+.music-stats{
+display:flex;
+justify-content:space-between;
+margin-top:11px;
+color:#777;
+font-size:11px;
 }
 
-/* ================= CUSTOM PLAYER ================= */
-
-.player{
-  position:fixed;
-  left:0;
-  right:0;
-  bottom:0;
-  z-index:3000;
-  background:rgba(5,5,5,.98);
-  border-top:2px solid var(--green);
-  padding:10px 12px;
-  display:none;
-  box-shadow:0 -5px 25px rgba(0,0,0,.5);
+.content-box{
+background:var(--card);
+border:1px solid var(--border);
+border-radius:14px;
+padding:22px;
+margin-bottom:18px;
 }
 
-.player.visible{
-  display:block;
+.content-box h3{
+color:var(--green);
+margin-bottom:9px;
 }
 
-.player-inner{
-  max-width:1100px;
-  margin:auto;
+.content-box p{
+color:#bbb;
 }
 
-.player-top{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:10px;
-  margin-bottom:8px;
-}
-
-.now-playing{
-  min-width:0;
-}
-
-.now-playing small{
-  color:#777;
-  display:block;
-  font-size:10px;
-}
-
-.now-playing strong{
-  display:block;
-  color:#fff;
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
-  font-size:14px;
-}
-
-.close-player{
-  background:#181818;
-  border:1px solid #333;
-  color:#aaa;
-  border-radius:7px;
-  padding:5px 8px;
-}
-
-.progress{
-  width:100%;
-  height:5px;
-  accent-color:var(--green);
-  cursor:pointer;
-}
-
-.player-controls{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-  margin-top:8px;
-}
-
-.player-btn{
-  width:42px;
-  height:36px;
-  background:#171717;
-  border:1px solid #333;
-  color:#fff;
-  border-radius:8px;
-}
-
-.player-btn.main{
-  background:var(--green);
-  color:#000;
-  border-color:var(--green);
-}
-
-.time{
-  color:#777;
-  font-size:11px;
-  min-width:75px;
-  text-align:center;
-}
-
-/* ================= BOX ================= */
-
-.box{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:15px;
-  padding:22px;
-}
-
-.box h3{
-  color:var(--green);
-  margin-bottom:8px;
-}
-
-.box p{
-  color:#bbb;
-}
-
-/* ================= NOVELTIES ================= */
-
-.news-grid{
-  display:grid;
-  grid-template-columns:
-    repeat(auto-fit,minmax(220px,1fr));
-  gap:12px;
-}
-
-.news{
-  background:#111;
-  border:1px solid var(--border);
-  border-radius:13px;
-  padding:20px;
-}
-
-.news strong{
-  display:block;
-  color:var(--green);
-  margin-bottom:6px;
-}
-
-.news span{
-  color:#999;
-  font-size:13px;
-}
-
-/* ================= PLATFORMS ================= */
-
-.platforms{
-  display:grid;
-  grid-template-columns:
-    repeat(auto-fit,minmax(200px,1fr));
-  gap:12px;
+.platform-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:12px;
 }
 
 .platform{
-  background:#121212;
-  border:1px solid var(--border);
-  border-radius:12px;
-  padding:20px;
-  text-align:center;
+background:#121212;
+border:1px solid var(--border);
+border-radius:12px;
+padding:20px;
+text-align:center;
 }
 
 .platform:hover{
-  border-color:var(--green);
+border-color:var(--green);
 }
 
 .platform strong{
-  display:block;
-  color:var(--green);
-  margin-bottom:6px;
+display:block;
+color:var(--green);
+margin-bottom:6px;
 }
 
 .platform span{
-  color:#888;
-  font-size:13px;
+font-size:13px;
+color:#999;
 }
 
-/* ================= COMMENTS ================= */
+.comments{
+display:grid;
+gap:10px;
+}
 
-.comment-highlight{
-  border:1px solid rgba(0,255,102,.25);
-  background:
-    linear-gradient(145deg,#101810,#090909);
+.comment{
+background:#101010;
+border:1px solid #242424;
+border-radius:11px;
+padding:14px;
+}
+
+.comment strong{
+color:var(--green);
+}
+
+.comment p{
+color:#bbb;
+margin-top:5px;
+}
+
+.comment small{
+color:#666;
 }
 
 .comment-form{
-  display:grid;
-  gap:10px;
-  margin-bottom:25px;
+display:grid;
+gap:10px;
+margin-bottom:25px;
 }
 
 .comment-form input,
 .comment-form textarea{
-  width:100%;
-  background:#080808;
-  color:#fff;
-  border:1px solid var(--border);
-  border-radius:9px;
-  padding:12px;
-  outline:none;
+width:100%;
+background:#0b0b0b;
+border:1px solid var(--border);
+color:#fff;
+border-radius:9px;
+padding:12px;
+outline:none;
 }
 
 .comment-form textarea{
-  min-height:110px;
-  resize:vertical;
+min-height:100px;
+resize:vertical;
 }
 
-.comment-form input:focus,
-.comment-form textarea:focus{
-  border-color:var(--green);
+.ad{
+max-width:1000px;
+min-height:90px;
+margin:25px auto;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:#555;
+font-size:11px;
 }
 
-.comment-actions{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-}
-
-.comments{
-  display:grid;
-  gap:12px;
-}
-
-.comment{
-  background:#0b0b0b;
-  border:1px solid #242424;
-  border-radius:12px;
-  padding:14px;
-}
-
-.comment-head{
-  display:flex;
-  justify-content:space-between;
-  gap:10px;
-}
-
-.comment strong{
-  color:var(--green);
-}
-
-.comment p{
-  color:#bbb;
-  margin:7px 0;
-}
-
-.comment small{
-  color:#666;
-}
-
-.empty-comments{
-  text-align:center;
-  color:#666;
-  padding:20px;
-}
-
-/* ================= CONTACT ================= */
-
-.contact-card{
-  text-align:center;
-  background:
-    radial-gradient(circle at center,
-      rgba(0,255,102,.10),
-      transparent 60%),
-    #101010;
-}
-
-.contact-number{
-  color:var(--green);
-  font-size:30px;
-  font-weight:900;
-  margin:10px 0 18px;
-  letter-spacing:1px;
+.ad span{
+border:1px dashed #292929;
+padding:25px 60px;
+border-radius:10px;
 }
 
 .contact-buttons{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:10px;
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-top:15px;
 }
 
-/* ================= FOOTER ================= */
+.contact{
+display:inline-block;
+padding:12px 18px;
+border:1px solid var(--green);
+border-radius:9px;
+color:var(--green);
+}
 
 footer{
-  background:#030303;
-  border-top:1px solid var(--border);
-  text-align:center;
-  padding:35px 15px;
+border-top:1px solid var(--border);
+background:#050505;
+padding:35px 15px;
+text-align:center;
 }
 
 footer p{
-  color:#777;
-  font-size:13px;
-  margin:5px;
+color:#777;
+font-size:13px;
+margin:5px;
 }
 
 .top{
-  display:inline-block;
-  color:var(--green);
-  margin-top:14px;
+display:inline-block;
+margin-top:15px;
+color:var(--green);
 }
 
-/* ================= STATUS ================= */
-
-.status{
-  text-align:center;
-  color:#777;
-  padding:20px;
+.loading{
+text-align:center;
+padding:35px;
+color:#888;
 }
 
 .error{
-  color:#ff9999;
-  background:#190c0c;
-  border:1px solid #4b2020;
-  border-radius:10px;
-  padding:14px;
+background:#1b0d0d;
+border:1px solid #542020;
+color:#ff9999;
+padding:15px;
+border-radius:10px;
+margin-bottom:15px;
 }
 
-/* ================= MOBILE ================= */
+/* PLAYER PERSONALIZADO */
 
-@media(max-width:800px){
+.player{
+position:fixed;
+left:0;
+right:0;
+bottom:0;
+z-index:3000;
+background:rgba(8,8,8,.98);
+border-top:1px solid var(--green);
+padding:9px 12px;
+display:none;
+box-shadow:0 -5px 20px rgba(0,0,0,.5);
+}
 
-  .header{
-    flex-direction:column;
-  }
+.player.show{
+display:block;
+}
 
-  nav{
-    width:100%;
-  }
+.player-inner{
+max-width:1100px;
+margin:auto;
+}
 
-  .stats{
-    grid-template-columns:repeat(2,1fr);
-  }
+.player-top{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.player-title{
+flex:1;
+font-weight:bold;
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+}
+
+.player-buttons{
+display:flex;
+gap:5px;
+}
+
+.player-buttons button{
+width:38px;
+height:38px;
+border-radius:50%;
+border:1px solid #333;
+background:#171717;
+color:#fff;
+}
+
+.player-buttons button:hover{
+border-color:var(--green);
+color:var(--green);
+}
+
+.progress{
+width:100%;
+height:5px;
+margin-top:8px;
+accent-color:var(--green);
+cursor:pointer;
+}
+
+.time{
+display:flex;
+justify-content:space-between;
+color:#777;
+font-size:10px;
+margin-top:2px;
+}
+
+.hidden-audio{
+display:none;
+}
+
+@media(max-width:850px){
+
+.header-inner{
+flex-direction:column;
+}
+
+nav{
+width:100%;
+}
+
+.stats{
+grid-template-columns:repeat(2,1fr);
+}
 
 }
 
 @media(max-width:480px){
 
-  .hero{
-    min-height:410px;
-    padding:55px 14px;
-  }
+.hero{
+min-height:390px;
+}
 
-  .container{
-    padding:35px 12px;
-  }
+.container{
+padding:35px 12px;
+}
 
-  .music-grid{
-    grid-template-columns:1fr;
-  }
+.music-grid{
+grid-template-columns:1fr;
+}
 
-  .actions{
-    grid-template-columns:repeat(3,1fr);
-  }
+.stats{
+grid-template-columns:repeat(2,1fr);
+}
 
-  .contact-number{
-    font-size:25px;
-  }
+.action-row{
+grid-template-columns:repeat(4,1fr);
+}
 
 }
 
@@ -768,545 +625,797 @@ footer p{
 
 <header>
 
-  <div class="header">
+<div class="header-inner">
 
-    <a href="#top" class="logo">
-      GRÉGO MUSIC OFICIAL
-    </a>
+<a class="brand" href="#top">
+GRÉGO MUSIC OFICIAL
+</a>
 
-    <nav>
-      <a href="#inicio">Início</a>
-      <a href="#musicas">Músicas</a>
-      <a href="#novidades">Novidades</a>
-      <a href="#eventos">Eventos</a>
-      <a href="#plataformas">Plataformas</a>
-      <a href="#comentarios">Comentários</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
+<nav>
+<a href="#inicio">Início</a>
+<a href="#musicas">Músicas</a>
+<a href="#novidades">Novidades</a>
+<a href="#eventos">Eventos</a>
+<a href="#plataformas">Plataformas</a>
+<a href="#comentarios">Comentários</a>
+<a href="#contacto">Contacto</a>
+</nav>
 
-  </div>
+</div>
 
 </header>
 
 
-<!-- ================= HERO ================= -->
-
 <section id="inicio" class="hero">
 
-  <div class="hero-inner">
+<div class="hero-content">
 
-    <div class="logo-mark">
-      GM
-    </div>
+<div class="logo">
+GM
+</div>
 
-    <h1>
-      GRÉGO <span class="green">MUSIC</span>
-    </h1>
+<h1>
+GRÉGO <span class="green">MUSIC</span>
+</h1>
 
-    <p>
-      Site oficial do Grégo Music.
-      Ouça músicas, descubra novidades,
-      partilhe, comente e acompanhe os projetos.
-    </p>
+<p>
+Site oficial do Grégo Music.
+Ouça músicas, descubra novos sons,
+acompanhe projetos e partilhe com outros ouvintes.
+</p>
 
-    <div class="hero-buttons">
+<div class="hero-buttons">
 
-      <a class="btn" href="#musicas">
-        🎵 Ouvir músicas
-      </a>
+<a class="btn" href="#musicas">
+🎵 Ouvir músicas
+</a>
 
-      <a class="btn outline" href="#comentarios">
-        💬 Comentar
-      </a>
+<a class="btn secondary" href="#plataformas">
+🌐 Plataformas
+</a>
 
-    </div>
+</div>
 
-  </div>
+</div>
 
 </section>
 
 
-<!-- ================= PUBLICIDADE 1 ================= -->
-
-<div class="ad-area">
-
-  <div class="ad-label">
-    PUBLICIDADE
-  </div>
-
+<div class="ad">
+<span>PUBLICIDADE</span>
 </div>
 
-
-<!-- ================= MÚSICAS ================= -->
 
 <section id="musicas" class="container">
 
-  <div class="title">
+<div class="section-title">
 
-    <h2>🎵 Músicas</h2>
+<h2>🎵 Músicas</h2>
 
-    <p>
-      As músicas MP3 são procuradas automaticamente no GitHub.
-    </p>
-
-  </div>
-
-
-  <div class="search">
-
-    <input
-      id="search"
-      type="search"
-      placeholder="🔎 Pesquisar música ou artista..."
-    >
-
-  </div>
-
-
-  <div class="stats">
-
-    <div class="stat">
-      <strong id="songsCount">0</strong>
-      <span>Músicas</span>
-    </div>
-
-    <div class="stat">
-      <strong id="playsCount">0</strong>
-      <span>Reproduções</span>
-    </div>
-
-    <div class="stat">
-      <strong id="downloadsCount">0</strong>
-      <span>Downloads</span>
-    </div>
-
-    <div class="stat">
-      <strong id="likesCount">0</strong>
-      <span>Likes</span>
-    </div>
-
-  </div>
-
-
-  <div id="status" class="status">
-    🔄 A procurar músicas...
-  </div>
-
-
-  <div id="musicGrid" class="music-grid"></div>
-
-</section>
-
-
-<!-- ================= PUBLICIDADE 2 ================= -->
-
-<div class="ad-area">
-
-  <div class="ad-label">
-    PUBLICIDADE
-  </div>
+<p>
+Todos os MP3 disponíveis no repositório oficial.
+Novos sons podem aparecer automaticamente.
+</p>
 
 </div>
 
 
-<!-- ================= NOVIDADES ================= -->
+<div class="search">
+
+<input
+id="search"
+type="search"
+placeholder="🔎 Pesquisar música ou artista..."
+autocomplete="off"
+>
+
+</div>
+
+
+<div class="stats">
+
+<div class="stat">
+<strong id="songsCount">0</strong>
+<span>Músicas</span>
+</div>
+
+<div class="stat">
+<strong id="playsCount">0</strong>
+<span>Reproduções</span>
+</div>
+
+<div class="stat">
+<strong id="downloadsCount">0</strong>
+<span>Downloads</span>
+</div>
+
+<div class="stat">
+<strong id="likesCount">0</strong>
+<span>Likes</span>
+</div>
+
+<div class="stat">
+<strong id="visitorsCount">0</strong>
+<span>Visitantes</span>
+</div>
+
+</div>
+
+
+<div id="musicStatus" class="loading">
+A carregar músicas...
+</div>
+
+<div id="musicGrid" class="music-grid"></div>
+
+</section>
+
+
+<div class="ad">
+<span>PUBLICIDADE</span>
+</div>
+
 
 <section id="novidades" class="container">
 
-  <div class="title">
+<div class="section-title">
 
-    <h2>🆕 Novidades</h2>
+<h2>🆕 Novidades</h2>
 
-    <p>
-      Fica atento aos novos sons e projetos.
-    </p>
+<p>Novos sons e projetos do Grégo Music.</p>
 
-  </div>
+</div>
 
+<div class="content-box">
 
-  <div class="news-grid">
+<h3>🎵 Novos sons</h3>
 
-    <div class="news">
-      <strong>🎵 Novos sons</strong>
-      <span>
-        Os novos MP3 adicionados ao GitHub
-        podem aparecer automaticamente no site.
-      </span>
-    </div>
+<p>
+O site consulta automaticamente o repositório oficial
+do Grégo Music. Quando novos ficheiros MP3 forem adicionados,
+eles poderão aparecer automaticamente na área de músicas.
+</p>
 
-    <div class="news">
-      <strong>🔥 Projetos</strong>
-      <span>
-        Acompanha os próximos projetos
-        do Grégo Music.
-      </span>
-    </div>
-
-    <div class="news">
-      <strong>📢 Divulgação</strong>
-      <span>
-        Partilha o site com os teus amigos
-        e outros ouvintes.
-      </span>
-    </div>
-
-  </div>
+</div>
 
 </section>
 
-
-<!-- ================= EVENTOS ================= -->
 
 <section id="eventos" class="container">
 
-  <div class="title">
+<div class="section-title">
 
-    <h2>📅 Eventos</h2>
+<h2>📅 Eventos</h2>
 
-    <p>
-      Agenda e apresentações.
-    </p>
+<p>Agenda, apresentações e atividades.</p>
 
-  </div>
+</div>
 
+<div class="content-box">
 
-  <div class="box">
+<h3>🔥 Projetos e eventos</h3>
 
-    <h3>Eventos do Grégo Music</h3>
+<p>
+Esta área ficará disponível para publicar eventos,
+apresentações, novidades e projetos do Grégo Music.
+</p>
 
-    <p>
-      Os próximos eventos e apresentações
-      poderão ser publicados nesta área.
-    </p>
-
-  </div>
+</div>
 
 </section>
 
-
-<!-- ================= PLATAFORMAS ================= -->
 
 <section id="plataformas" class="container">
 
-  <div class="title">
+<div class="section-title">
 
-    <h2>🌐 Plataformas</h2>
+<h2>🌐 Plataformas</h2>
 
-    <p>
-      Encontra o Grégo Music nas plataformas oficiais.
-    </p>
+<p>Encontre o Grégo Music nas plataformas oficiais.</p>
 
-  </div>
+</div>
 
+<div class="platform-grid">
 
-  <div class="platforms">
+<a class="platform"
+href="https://audiomack.com/smduasmodas"
+target="_blank"
+rel="noopener">
 
-    <a
-      class="platform"
-      href="https://audiomack.com/smduasmodas"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+<strong>🎧 Audiomack</strong>
+<span>Ouvir músicas</span>
 
-      <strong>🎧 Audiomack</strong>
-
-      <span>
-        Ouvir músicas
-      </span>
-
-    </a>
+</a>
 
 
-    <a
-      class="platform"
-      href="https://youtube.com/@familiayakuza-1?si=7s0p5vKVUujzO7Gc"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+<a class="platform"
+href="https://youtube.com/@familiayakuza-1?si=7s0p5vKVUujzO7Gc"
+target="_blank"
+rel="noopener">
 
-      <strong>▶️ YouTube</strong>
+<strong>▶️ YouTube</strong>
+<span>Vídeos e músicas</span>
 
-      <span>
-        Vídeos e músicas
-      </span>
-
-    </a>
+</a>
 
 
-    <a
-      class="platform"
-      href="https://www.tiktok.com/@famlia.cl.yakuza"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+<a class="platform"
+href="https://www.tiktok.com/@famlia.cl.yakuza"
+target="_blank"
+rel="noopener">
 
-      <strong>🎵 TikTok</strong>
+<strong>🎵 TikTok</strong>
+<span>Conteúdos</span>
 
-      <span>
-        Conteúdos
-      </span>
-
-    </a>
+</a>
 
 
-    <a
-      class="platform"
-      href="https://www.facebook.com/tarciositaki.calvagante"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+<a class="platform"
+href="https://www.facebook.com/tarciositaki.calvagante"
+target="_blank"
+rel="noopener">
 
-      <strong>📘 Facebook</strong>
+<strong>📘 Facebook</strong>
+<span>Perfil</span>
 
-      <span>
-        Perfil
-      </span>
+</a>
 
-    </a>
-
-  </div>
+</div>
 
 </section>
 
-
-<!-- ================= COMENTÁRIOS ================= -->
 
 <section id="comentarios" class="container">
 
-  <div class="title">
+<div class="section-title">
 
-    <h2>💬 O que dizem os ouvintes</h2>
+<h2>💬 O que dizem os ouvintes</h2>
 
-    <p>
-      Gostaste de uma música? Deixa o teu comentário.
-    </p>
-
-  </div>
-
-
-  <div class="box comment-highlight">
-
-    <form id="commentForm" class="comment-form">
-
-      <input
-        id="commentName"
-        type="text"
-        maxlength="60"
-        placeholder="👤 O teu nome"
-        required
-      >
-
-
-      <textarea
-        id="commentText"
-        maxlength="500"
-        placeholder="💬 Escreve aqui o que achaste da música..."
-        required
-      ></textarea>
-
-
-      <div class="comment-actions">
-
-        <button
-          class="btn"
-          type="submit"
-        >
-          🚀 Publicar comentário
-        </button>
-
-        <button
-          class="action"
-          type="button"
-          id="clearComment"
-        >
-          Limpar
-        </button>
-
-      </div>
-
-    </form>
-
-
-    <div id="comments" class="comments"></div>
-
-  </div>
-
-</section>
-
-
-<!-- ================= PUBLICIDADE 3 ================= -->
-
-<div class="ad-area">
-
-  <div class="ad-label">
-    PUBLICIDADE
-  </div>
+<p>
+Gostaste de uma música? Deixa a tua opinião.
+</p>
 
 </div>
 
 
-<!-- ================= SOBRE ================= -->
+<div class="content-box">
 
-<section id="sobre" class="container">
+<form id="commentForm" class="comment-form">
 
-  <div class="title">
+<input
+id="commentName"
+maxlength="60"
+placeholder="👤 O teu nome"
+required
+>
 
-    <h2>ℹ️ Sobre</h2>
+<textarea
+id="commentText"
+maxlength="500"
+placeholder="💬 Escreve o teu comentário..."
+required
+></textarea>
 
-  </div>
+<button class="btn" type="submit">
+🚀 Publicar comentário
+</button>
 
-
-  <div class="box">
-
-    <h3>
-      Grégo Music Oficial
-    </h3>
-
-    <p>
-      Espaço oficial dedicado ao Grégo Music,
-      reunindo músicas, projetos, novidades,
-      eventos, plataformas e conteúdos.
-    </p>
-
-  </div>
-
-</section>
+</form>
 
 
-<!-- ================= CONTACTO ================= -->
+<div id="commentsList" class="comments"></div>
 
-<section id="contacto" class="container">
-
-  <div class="title">
-
-    <h2>📞 Contacto</h2>
-
-    <p>
-      Divulgação, eventos, parcerias e publicidade.
-    </p>
-
-  </div>
-
-
-  <div class="box contact-card">
-
-    <h3>
-      Fala diretamente com o Grégo Music
-    </h3>
-
-    <div class="contact-number">
-      949 623 013
-    </div>
-
-
-    <div class="contact-buttons">
-
-      <a
-        class="btn"
-        href="tel:+244949623013"
-      >
-        📞 Ligar
-      </a>
-
-
-      <a
-        class="btn outline"
-        href="https://wa.me/244949623013"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        💬 WhatsApp
-      </a>
-
-    </div>
-
-  </div>
+</div>
 
 </section>
 
-
-<!-- ================= PRIVACIDADE ================= -->
 
 <section class="container">
 
-  <div class="box">
+<div class="content-box">
 
-    <h3>
-      🔒 Privacidade
-    </h3>
+<h3>ℹ️ Sobre Grégo Music</h3>
 
-    <p>
-      O site pode utilizar armazenamento local para
-      favoritos, comentários e estatísticas.
-      O Google AdSense e outros serviços externos
-      podem utilizar cookies e tecnologias semelhantes
-      de acordo com as respetivas políticas.
-    </p>
+<p>
+Espaço oficial dedicado ao Grégo Music,
+reunindo músicas, projetos, novidades,
+eventos, plataformas e conteúdos.
+</p>
 
-  </div>
+</div>
 
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+<section id="contacto" class="container">
+
+<div class="content-box">
+
+<h3>📞 Contacto</h3>
+
+<p>
+Para divulgação, eventos, parcerias e publicidade:
+</p>
+
+<p style="font-size:22px;color:#00ff66;margin-top:10px;font-weight:bold;">
+949 623 013
+</p>
+
+<div class="contact-buttons">
+
+<a class="contact"
+href="tel:+244949623013">
+📞 Ligar
+</a>
+
+<a class="contact"
+href="https://wa.me/244949623013"
+target="_blank"
+rel="noopener">
+💬 WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<div class="ad">
+<span>PUBLICIDADE</span>
+</div>
+
+
+<section class="container">
+
+<div class="content-box">
+
+<h3>🔒 Privacidade</h3>
+
+<p>
+Este site pode utilizar armazenamento local para
+guardar favoritos, curtidas, comentários e estatísticas
+neste dispositivo. O Google AdSense e outros serviços
+externos podem utilizar cookies de acordo com as suas
+respetivas políticas.
+</p>
+
+</div>
+
+</section>
+
 
 <footer>
 
-  <p>
-    © <span id="year"></span>
-    Grégo Music Oficial.
-    Todos os direitos reservados.
-  </p>
+<p>
+© <span id="year"></span> Grégo Music Oficial.
+Todos os direitos reservados.
+</p>
 
-  <p>
-    Conteúdo musical pertencente aos respetivos
-    autores e titulares.
-  </p>
+<p>
+Conteúdo musical pertencente aos respetivos autores
+e titulares.
+</p>
 
-  <p>
-    Contacto: 949 623 013
-  </p>
-
-
-  <a class="top" href="#top">
-    ↑ Voltar ao topo
-  </a>
+<a class="top" href="#top">
+↑ Voltar ao topo
+</a>
 
 </footer>
 
 
-<!-- ================= PLAYER PERSONALIZADO ================= -->
+<!-- PLAYER -->
 
 <div id="player" class="player">
 
-  <div class="player-inner">
+<div class="player-inner">
 
-    <div class="player-top">
+<div class="player-top">
 
-      <div class="now-playing">
+<div id="playerTitle" class="player-title">
+Nenhuma música
+</div>
 
-        <small>
-          🎵 A tocar agora
-        </small>
+<div class="player-buttons">
 
-        <strong id="nowPlaying">
-          Nenhuma música
-        </strong>
+<button id="prevBtn" title="Anterior">
+⏮
+</button>
 
-      </div>
+<button id="playBtn" title="Reproduzir">
+▶
+</button>
+
+<button id="nextBtn" title="Seguinte">
+⏭
+</button>
+
+<button id="closeBtn" title="Fechar">
+✕
+</button>
+
+</div>
+
+</div>
+
+<input
+id="progress"
+class="progress"
+type="range"
+min="0"
+max="100"
+value="0"
+>
+
+<div class="time">
+
+<span id="currentTime">0:00</span>
+
+<span id="duration">0:00</span>
+
+</div>
+
+<audio
+id="audio"
+class="hidden-audio"
+preload="metadata">
+</audio>
+
+</div>
+
+</div>
 
 
-      <button
-        id="closePlayer"
-        class="close-player"
-        type="button"
-      >
-        ✕
-      </button>
+<script>
 
-    </div>
+/* =========================================================
+   GRÉGO MUSIC OFICIAL
+   SISTEMA PRINCIPAL
+========================================================= */
 
 
-    <input
-      id="progress"
-      cla
+/* GITHUB */
+
+const GITHUB_API =
+"https://api.github.com/repos/gregomusic/Grego-music/contents/";
+
+const SONGS_JSON =
+"https://raw.githubusercontent.com/gregomusic/Grego-music/main/songs.json";
+
+
+/* SUPABASE
+
+   DEIXADO VAZIO DE PROPÓSITO.
+   Quando criares o novo projeto, colocaremos aqui:
+   URL pública
+   ANON/PUBLIC KEY
+
+   NÃO colocar SERVICE_ROLE KEY.
+*/
+
+const SUPABASE_URL = "";
+const SUPABASE_ANON_KEY = "";
+
+
+/* ELEMENTOS */
+
+const grid = document.getElementById("musicGrid");
+const statusBox = document.getElementById("musicStatus");
+
+const search = document.getElementById("search");
+
+const songsCount = document.getElementById("songsCount");
+const playsCount = document.getElementById("playsCount");
+const downloadsCount = document.getElementById("downloadsCount");
+const likesCount = document.getElementById("likesCount");
+const visitorsCount = document.getElementById("visitorsCount");
+
+const player = document.getElementById("player");
+const playerTitle = document.getElementById("playerTitle");
+
+const audio = document.getElementById("audio");
+
+const playBtn = document.getElementById("playBtn");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+const closeBtn = document.getElementById("closeBtn");
+
+const progress = document.getElementById("progress");
+
+const currentTime = document.getElementById("currentTime");
+const duration = document.getElementById("duration");
+
+
+/* ESTADO */
+
+let songs = [];
+
+let currentIndex = -1;
+
+let favorites =
+JSON.parse(localStorage.getItem("grego_favoritas") || "[]");
+
+let stats =
+JSON.parse(localStorage.getItem("grego_music_stats") || "{}");
+
+let comments =
+JSON.parse(localStorage.getItem("grego_comments") || "[]");
+
+
+/* FORMATAÇÃO */
+
+function formatNumber(number){
+
+return Number(number || 0).toLocaleString("pt-PT");
+
+}
+
+
+function formatTime(seconds){
+
+if(!Number.isFinite(seconds)){
+return "0:00";
+}
+
+const min = Math.floor(seconds / 60);
+
+const sec = Math.floor(seconds % 60)
+.toString()
+.padStart(2,"0");
+
+return min + ":" + sec;
+
+}
+
+
+/* ESTATÍSTICAS */
+
+function getSongStats(id){
+
+if(!stats[id]){
+
+stats[id] = {
+plays:0,
+downloads:0,
+likes:0
+};
+
+}
+
+return stats[id];
+
+}
+
+
+function saveStats(){
+
+localStorage.setItem(
+"grego_music_stats",
+JSON.stringify(stats)
+);
+
+}
+
+
+function updateGlobalStats(){
+
+let plays = 0;
+let downloads = 0;
+let likes = 0;
+
+songs.forEach(song => {
+
+const s = getSongStats(song.id);
+
+plays += s.plays || 0;
+downloads += s.downloads || 0;
+likes += s.likes || 0;
+
+});
+
+songsCount.textContent =
+formatNumber(songs.length);
+
+playsCount.textContent =
+formatNumber(plays);
+
+downloadsCount.textContent =
+formatNumber(downloads);
+
+likesCount.textContent =
+formatNumber(likes);
+
+}
+
+
+/* VISITANTES */
+
+function countVisitor(){
+
+const key = "grego_visit_today";
+
+const today =
+new Date().toISOString().slice(0,10);
+
+if(localStorage.getItem(key) !== today){
+
+localStorage.setItem(key,today);
+
+let visitors =
+Number(localStorage.getItem("grego_visitors") || 0);
+
+visitors++;
+
+localStorage.setItem(
+"grego_visitors",
+visitors
+);
+
+}
+
+visitorsCount.textContent =
+formatNumber(
+Number(localStorage.getItem("grego_visitors") || 0)
+);
+
+}
+
+countVisitor();
+
+
+/* MÚSICAS FIXAS DE SEGURANÇA
+
+   Estas correspondem exatamente aos ficheiros
+   encontrados no teu GitHub.
+*/
+
+const FALLBACK = [
+
+{
+id:"anthony-ndulo-ft-grego-yakuza-flechas",
+title:"Anthony Ndulo ft Grego Yakuza Flechas",
+artist:"Grégo Music",
+file:"Anthony Ndulo ft Grego Yakuza  Flechas .mp3"
+},
+
+{
+id:"choros",
+title:"Choros",
+artist:"Grégo Music",
+file:"Choros .mp3"
+},
+
+{
+id:"djhon-outro-lado",
+title:"Djhon outro lado",
+artist:"Grégo Music",
+file:"Djhon_outro_lado_(prodby_ND-Studio).mp3"
+},
+
+{
+id:"grego-m",
+title:"Grego M",
+artist:"Grégo Music",
+file:"Grego_M_.mp3"
+},
+
+{
+id:"grego-moreno-distante",
+title:"Grego Moreno distânte",
+artist:"Grégo Music",
+file:"Grego_Moreno_distânte.mp3"
+},
+
+{
+id:"meu-negro",
+title:"Meu negro",
+artist:"Grégo Music",
+file:"Meu negro.mp3"
+},
+
+{
+id:"new-version-mudanca",
+title:"New Version feat Clã Yakuza mudança",
+artist:"Grégo Music",
+file:"New_Version_feat_Clã_Yakuza_mudança_(Prodby_ND_Studio).mp3"
+},
+
+{
+id:"new-version-planos",
+title:"New Version planos",
+artist:"Grégo Music",
+file:"New_Version_planos_(Prodby_ND-Studio).mp3"
+}
+
+];
+
+
+/* CRIAR URL */
+
+function githubRaw(file){
+
+return "https://raw.githubusercontent.com/gregomusic/Grego-music/main/"
++
+encodeURIComponent(file);
+
+}
+
+
+/* NORMALIZAR */
+
+function normalizeSong(song){
+
+const file =
+song.filename ||
+song.file ||
+"";
+
+const title =
+song.title ||
+file
+.replace(/\.mp3$/i,"")
+.replace(/_/g," ");
+
+return {
+
+id:
+song.slug ||
+song.id ||
+file.toLowerCase(),
+
+title:title,
+
+artist:
+song.artist ||
+"Grégo Music",
+
+file:file,
+
+url:
+song.url ||
+githubRaw(file)
+
+};
+
+}
+
+
+/* CARREGAR SONGS.JSON */
+
+async function loadSongsJSON(){
+
+try{
+
+const response =
+await fetch(SONGS_JSON + "?v=" + Date.now(), {
+cache:"no-store"
+});
+
+if(!response.ok){
+throw new Error("songs.json");
+}
+
+const data =
+await response.json();
+
+if(Array.isArray(data) && data.length){
+
+return data.map(normalizeSong);
+
+}
+
+}catch(error){
+
+console.log("songs.json indisponível:",error);
+
+}
+
+return [];
+
+}
+
+
+/* CARREGAR API GITHUB */
+
+async funct
